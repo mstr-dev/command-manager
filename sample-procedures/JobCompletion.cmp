@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<PROCEDURE_DEFINITION>
+<DESCRIPTION/>
+<CODE><![CDATA[
+
+boolean all_month_processed=false;while (!all_month_processed){	execute("TRIGGER SUBSCRIPTION \"" +SubscriptionName +"\" FOR PROJECT \""+ ProjectName + "\";");	ResultSet oResultSet = executeCapture("LIST ALL JOBS;");	while(!oResultSet.isEof()) {		//get job id		int id = Integer.parseInt(oResultSet.getFieldValueString(JOB_ID));		ResultSet job = executeCapture("LIST ALL PROPERTIES FOR JOB " + id + ";");		//get job status		String status =(String)job.getFieldValue(JOB_STATUS);		while (!status.equals("Completed")) { 			printOut("Waiting for job to be compeleted");			Thread.sleep(5000); // 3 means the job is completed. Wait every 5 seconds to check if the job is finished execution.		}		oResultSet.moveNext();	}	printOut("One time execution done.");	//Below we need to add the logic to check if all the months are processed, when all are processed, then we set the flag to true	all_month_processed=true;}printOut ("all the months are processed");
+
+]]>
+</CODE>
+<SAMPLE/>
+<VERSION/>
+<TYPE>CUSTOM</TYPE>
+<INPUT_PARAMS>
+<INPUT INPUT_TYPE="STRING">SubscriptionName</INPUT>
+<INPUT INPUT_TYPE="STRING">ProjectName</INPUT>
+</INPUT_PARAMS>
+<CLASSPATH/>
+<TEST_INPUT>
+<TEST_INPUT_PARAM/>
+<TEST_INPUT_PARAM/>
+</TEST_INPUT>
+<TEST_CONNECTION_INFO>
+<TEST_PSN_NAME/>
+<TEST_USERNAME/>
+<TEST_PASSWORD>00000000453ec11a5ae5e97cb1fe638b94860d28c911585ab4fc4c77d5b77ded</TEST_PASSWORD>
+</TEST_CONNECTION_INFO>
+</PROCEDURE_DEFINITION>

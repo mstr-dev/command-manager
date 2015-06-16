@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<PROCEDURE_DEFINITION>
+<DESCRIPTION/>
+<CODE><![CDATA[
+
+ResultSet USERS = executeCapture("LIST PROPERTIES FOR USERS IN GROUP " + "\"" +sGroup +"\"" + ";"); USERS.moveFirst();while(!USERS.isEof()){         String rLogin=USERS.getFieldValueString(LOGIN);         printOut("User Login = " + rLogin);         ResultSet rAddress=(ResultSet)USERS.getFieldValue(DS_ADDRESSES_RESULTSET);         rAddress.moveFirst();         //go through each address         while(!rAddress.isEof()){	String rPhyAdr = rAddress.getFieldValueString(DS_ADDRESS_PHYSICAL);	printOut("--------Physical Address: " + rPhyAdr);          rAddress.moveNext();          }        USERS.moveNext(); } 
+
+]]>
+</CODE>
+<SAMPLE>EXECUTE PROCEDURE ListLoginAndAddresses ("Customers");</SAMPLE>
+<VERSION>1.0</VERSION>
+<TYPE>CUSTOM</TYPE>
+<INPUT_PARAMS>
+<INPUT INPUT_TYPE="STRING">sGroup</INPUT>
+</INPUT_PARAMS>
+<CLASSPATH/>
+<TEST_INPUT>
+<TEST_INPUT_PARAM>Customers</TEST_INPUT_PARAM>
+</TEST_INPUT>
+<TEST_CONNECTION_INFO>
+<TEST_PSN_NAME>MicroStrategy Analytics Modules</TEST_PSN_NAME>
+<TEST_USERNAME>administrator</TEST_USERNAME>
+<TEST_PASSWORD>00000000453ec11a5ae5e97cb1fe638b94860d28c911585ab4fc4c77d5b77ded</TEST_PASSWORD>
+</TEST_CONNECTION_INFO>
+</PROCEDURE_DEFINITION>

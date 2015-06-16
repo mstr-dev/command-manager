@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<PROCEDURE_DEFINITION>
+<DESCRIPTION/>
+<CODE><![CDATA[
+
+//get all the document names as listString[] sDocumentNames;if(DocumentNames == null || DocumentNames.trim().equals("")){	sDocumentNames = new String[] {};}else{	sDocumentNames=DocumentNames.split("\\[");}//Retrieve all Document caches for the specified projectResultSet oAllDocumentCaches = executeCapture("LIST ALL Document CACHES IN PROJECT \"" + projectName + "\";");if(oAllDocumentCaches.getRowCount()>0){	oAllDocumentCaches.moveFirst();	//Go through each Document Cache found and delete it from project	while (!oAllDocumentCaches.isEof()){			//get cache properties list from the all caches resultset			ResultSet oCacheSet=(ResultSet)oAllDocumentCaches.getFieldValue(DisplayPropertyEnum.DOCUMENT_CACHE_LIST);			if (oCacheSet != null){				if (oCacheSet.getRowCount()>0){					oCacheSet.moveFirst(); 					//retrieve cache one by one from the cache list					while (!oCacheSet.isEof()){						String sCacheName=oCacheSet.getFieldValueString(DisplayPropertyEnum.REPORT_CACHE);						String sCacheId = oCacheSet.getFieldValueString(DisplayPropertyEnum.ID);						boolean ToDelete = false;						for (String Document:sDocumentNames){							if(Document.trim().equalsIgnoreCase(sCacheName.trim())){									ToDelete = true;									break;							}						}										if (ToDelete){																String sQuery = "DELETE DOCUMENT CACHES GUID " +sCacheId + " IN PROJECT \"" + projectName + "\";";								execute(sQuery);						}						oCacheSet.moveNext();					}				}			}			oAllDocumentCaches.moveNext();	}} 
+
+]]>
+</CODE>
+<SAMPLE>EXECUTE PROCEDURE DeleteDocumentCaches ("1. Wireless Bill", "MicroStrategy Tutorial");</SAMPLE>
+<VERSION/>
+<TYPE>CUSTOM</TYPE>
+<INPUT_PARAMS>
+<INPUT INPUT_TYPE="STRING">DocumentNames</INPUT>
+<INPUT INPUT_TYPE="STRING">projectName</INPUT>
+</INPUT_PARAMS>
+<CLASSPATH/>
+<TEST_INPUT>
+<TEST_INPUT_PARAM/>
+<TEST_INPUT_PARAM/>
+</TEST_INPUT>
+<TEST_CONNECTION_INFO>
+<TEST_PSN_NAME/>
+<TEST_USERNAME/>
+<TEST_PASSWORD>00000000453ec11a5ae5e97cb1fe638b94860d28c911585ab4fc4c77d5b77ded</TEST_PASSWORD>
+</TEST_CONNECTION_INFO>
+</PROCEDURE_DEFINITION>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<PROCEDURE_DEFINITION>
+<DESCRIPTION>...</DESCRIPTION>
+<CODE><![CDATA[
+
+javax.xml.parsers.DocumentBuilderFactory factory = javax.xml.parsers.DocumentBuilderFactory.newInstance();javax.xml.parsers.DocumentBuilder builder = factory.newDocumentBuilder();org.w3c.dom.Document document=builder.newDocument();org.w3c.dom.Element root = document.createElement("Result");document.appendChild(root);DisplayPropertyEnum iProperty= DisplayPropertyEnum.EXPRESSION;ResultSet users=(ResultSet) executeCapture("LIST MEMBERS FOR USER GROUP \"Customers\";");users.moveFirst();ResultSet members=(ResultSet)users.getFieldValue(MEMBER_RESULTSET);members.moveFirst();String userName=null;while(!members.isEof()){	org.w3c.dom.Element user=document.createElement("User");	userName=(String)members.getFieldValue(LOGIN);	printOut("List properties for user: "+userName);	ResultSet userPros=(ResultSet)executeCapture("LIST PROPERTIES FOR USER \""+userName+"\";");	userPros.moveFirst();	while(!userPros.isEof()){		String ID=(String)userPros.getFieldValue(iProperty.ID);		String LOGIN=(String)userPros.getFieldValue(iProperty.LOGIN);		String NAME=(String)userPros.getFieldValue(iProperty.FULL_NAME);		printOut(ID+LOGIN+NAME);		org.w3c.dom.Element eid=document.createElement("Id");		eid.appendChild(document.createTextNode(ID));		org.w3c.dom.Element elogin=document.createElement("Login");		elogin.appendChild(document.createTextNode(LOGIN));		org.w3c.dom.Element ename=document.createElement("FullName");			ename.appendChild(document.createTextNode(NAME));		user.appendChild(eid);		user.appendChild(elogin);		user.appendChild(ename);		userPros.moveNext();	}root.appendChild(user);members.moveNext();}javax.xml.transform.TransformerFactory tf = javax.xml.transform.TransformerFactory.newInstance();try {	javax.xml.transform.Transformer transformer = tf.newTransformer();	javax.xml.transform.dom.DOMSource source = new javax.xml.transform.dom.DOMSource(document);	transformer.setOutputProperty(javax.xml.transform.OutputKeys.ENCODING, "gb2312");	transformer.setOutputProperty(javax.xml.transform.OutputKeys.INDENT, "yes");	PrintWriter pw = new PrintWriter(new FileOutputStream("c:\\test.xml"));	javax.xml.transform.stream.StreamResult result = new javax.xml.transform.stream.StreamResult(pw);	transformer.transform(source, result);	printOut("xml is generated!");} catch (Exception e) {	System.out.println(e.getMessage());} 
+
+]]>
+</CODE>
+<SAMPLE/>
+<VERSION>1.0</VERSION>
+<TYPE>CUSTOM</TYPE>
+<INPUT_PARAMS/>
+<CLASSPATH>
+<CLASSPATH_ITEM>C:\Program Files (x86)\Java\jre1.6.0_07\lib\rt.jar</CLASSPATH_ITEM>
+</CLASSPATH>
+<TEST_INPUT/>
+<TEST_CONNECTION_INFO>
+<TEST_PSN_NAME>MicroStrategy Analytics Modules</TEST_PSN_NAME>
+<TEST_USERNAME>administrator</TEST_USERNAME>
+<TEST_PASSWORD>00000000453ec11a5ae5e97cb1fe638b94860d28c911585ab4fc4c77d5b77ded</TEST_PASSWORD>
+</TEST_CONNECTION_INFO>
+</PROCEDURE_DEFINITION>

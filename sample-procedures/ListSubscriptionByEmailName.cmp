@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<PROCEDURE_DEFINITION>
+<DESCRIPTION/>
+<CODE><![CDATA[
+
+ResultSet Subscriptions=(ResultSet)executeCapture("LIST ALL SUBSCRIPTIONS FOR DELIVERYTYPE EMAIL FOR PROJECT \"MicroStrategy Tutorial\";");Subscriptions.moveFirst();while(!Subscriptions.isEof()){	boolean Flag=false;	String SubscriptionType=(String)Subscriptions.getFieldValue(SUBSCRIPTION_TYPE);	ResultSet Recipients=(ResultSet)Subscriptions.getFieldValue(RECIPIENT_RESULTSET);	Recipients.moveFirst();	while(!Recipients.isEof()){		String RecipientAddress=Recipients.getFieldValueString(RECIPIENT_ADDRESS);		if (RecipientAddress.equals("[address1]"))			Flag=true;		Recipients.moveNext();		}	if (Flag){		String SubscriptionID=Subscriptions.getFieldValueString(GUID);		execute ("LIST ALL PROPERTIES FOR SUBSCRIPTION GUID " + SubscriptionID + " For Project \"MicroStrategy Tutorial\";");	}	Subscriptions.moveNext();}
+
+]]>
+</CODE>
+<SAMPLE/>
+<VERSION/>
+<TYPE>CUSTOM</TYPE>
+<INPUT_PARAMS/>
+<CLASSPATH/>
+<TEST_INPUT/>
+<TEST_CONNECTION_INFO>
+<TEST_PSN_NAME>MicroStrategy Analytics Modules</TEST_PSN_NAME>
+<TEST_USERNAME>administrator</TEST_USERNAME>
+<TEST_PASSWORD>00000000453ec11a5ae5e97cb1fe638b94860d28c911585ab4fc4c77d5b77ded</TEST_PASSWORD>
+</TEST_CONNECTION_INFO>
+</PROCEDURE_DEFINITION>

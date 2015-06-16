@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<PROCEDURE_DEFINITION>
+<DESCRIPTION>This procedure will return all the subscirptions together with their properties in one project.</DESCRIPTION>
+<CODE><![CDATA[
+
+ResultSet Subscriptions=(ResultSet)executeCapture("LIST ALL SUBSCRIPTIONS FOR PROJECT \"" + sProjectName + "\";");Subscriptions.moveFirst();while(!Subscriptions.isEof()){	String SubscriptionID=Subscriptions.getFieldValueString(GUID);	execute ("LIST ALL PROPERTIES FOR SUBSCRIPTION GUID " + SubscriptionID + " For Project \"" + sProjectName + "\";");	Subscriptions.moveNext();}
+
+]]>
+</CODE>
+<SAMPLE>execute procedure ListSubscriptionPropByProject ("MicroStrategy Tutorial");</SAMPLE>
+<VERSION>1.0</VERSION>
+<TYPE>CUSTOM</TYPE>
+<INPUT_PARAMS>
+<INPUT INPUT_TYPE="STRING">sProjectName</INPUT>
+</INPUT_PARAMS>
+<CLASSPATH/>
+<TEST_INPUT>
+<TEST_INPUT_PARAM/>
+</TEST_INPUT>
+<TEST_CONNECTION_INFO>
+<TEST_PSN_NAME>MicroStrategy Analytics Modules</TEST_PSN_NAME>
+<TEST_USERNAME>administrator</TEST_USERNAME>
+<TEST_PASSWORD>00000000453ec11a5ae5e97cb1fe638b94860d28c911585ab4fc4c77d5b77ded</TEST_PASSWORD>
+</TEST_CONNECTION_INFO>
+</PROCEDURE_DEFINITION>
