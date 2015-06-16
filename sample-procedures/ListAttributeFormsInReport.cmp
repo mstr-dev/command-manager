@@ -3,8 +3,41 @@
 <DESCRIPTION/>
 <CODE><![CDATA[
 
-//Get all attributes in the reportResultSet oReportProp = executeCapture("LIST ALL PROPERTIES FOR REPORT  \"" + sReportName + "\" IN FOLDER \"" +sFolderName + "\" FOR PROJECT \""  + sProjectName + "\";"); oReportProp.moveFirst();ResultSet oReportAxisRS = (ResultSet)oReportProp.getFieldValue(REPORT_AXIS_RESULT_SET);oReportAxisRS.moveFirst();printOut("==============Attribute Forms Used In This Report====================");while (!oReportAxisRS.isEof()){	ResultSet oTemplateUnits = (ResultSet)oReportAxisRS.getFieldValue(TEMPLATE_UNITS_RESULT_SET);	oTemplateUnits.moveFirst();	while (!oTemplateUnits.isEof()){		String oUnitType = oTemplateUnits.getFieldValueString(DisplayPropertyEnum.TYPE);		if(oUnitType.equals("Attribute")) {			String oAttributeName = oTemplateUnits.getFieldValueString(DisplayPropertyEnum.TEMPLATE_UNIT);			String oAttributePath =  oTemplateUnits.getFieldValueString(DisplayPropertyEnum.PATH);			printOut("Attribute = " + oAttributeName );			//get folder path			int NameLength = oAttributeName.length();			int ProjectLength = sProjectName.length();			String	oFolderPatht = oAttributePath.substring(0, oAttributePath.length()-NameLength);			String oFolderPath = oFolderPatht.substring(ProjectLength+1, oFolderPatht.length()-1);			//get attribute form			ResultSet oAttributeProp = executeCapture("LIST PROPERTIES FOR ATTRIBUTE \"" + oAttributeName + "\" IN FOLDER \"" + oFolderPath + "\" FOR PROJECT \"" + sProjectName + "\";");			oAttributeProp.moveFirst();			ResultSet oAttributeDisplay = (ResultSet)oAttributeProp.getFieldValue(DisplayPropertyEnum.ATTRIBUTE_DISPLAY);			oAttributeDisplay.moveFirst();			ResultSet oAttributeRepDisp = (ResultSet)oAttributeDisplay.getFieldValue(DisplayPropertyEnum.REPORT_DISPLAY_LIST);			oAttributeRepDisp.moveFirst();			String oDisplayForm = oAttributeRepDisp.getFieldValueString(DisplayPropertyEnum.ATTR_REPORT_DISPLAY);			printOut("AttributeForm = " + oDisplayForm);		}	oTemplateUnits.moveNext();	}oReportAxisRS.moveNext();}
+//Get all attributes in the report
+ResultSet oReportProp = executeCapture("LIST ALL PROPERTIES FOR REPORT  \"" + sReportName + "\" IN FOLDER \"" +sFolderName + "\" FOR PROJECT \""  + sProjectName + "\";"); 
+oReportProp.moveFirst();
 
+ResultSet oReportAxisRS = (ResultSet)oReportProp.getFieldValue(REPORT_AXIS_RESULT_SET);
+oReportAxisRS.moveFirst();
+printOut("==============Attribute Forms Used In This Report====================");
+while (!oReportAxisRS.isEof()){
+	ResultSet oTemplateUnits = (ResultSet)oReportAxisRS.getFieldValue(TEMPLATE_UNITS_RESULT_SET);
+	oTemplateUnits.moveFirst();
+	while (!oTemplateUnits.isEof()){
+		String oUnitType = oTemplateUnits.getFieldValueString(DisplayPropertyEnum.TYPE);
+		if(oUnitType.equals("Attribute")) {
+			String oAttributeName = oTemplateUnits.getFieldValueString(DisplayPropertyEnum.TEMPLATE_UNIT);
+			String oAttributePath =  oTemplateUnits.getFieldValueString(DisplayPropertyEnum.PATH);
+			printOut("Attribute = " + oAttributeName );
+			//get folder path
+			int NameLength = oAttributeName.length();
+			int ProjectLength = sProjectName.length();
+			String	oFolderPatht = oAttributePath.substring(0, oAttributePath.length()-NameLength);
+			String oFolderPath = oFolderPatht.substring(ProjectLength+1, oFolderPatht.length()-1);
+			//get attribute form
+			ResultSet oAttributeProp = executeCapture("LIST PROPERTIES FOR ATTRIBUTE \"" + oAttributeName + "\" IN FOLDER \"" + oFolderPath + "\" FOR PROJECT \"" + sProjectName + "\";");
+			oAttributeProp.moveFirst();
+			ResultSet oAttributeDisplay = (ResultSet)oAttributeProp.getFieldValue(DisplayPropertyEnum.ATTRIBUTE_DISPLAY);
+			oAttributeDisplay.moveFirst();
+			ResultSet oAttributeRepDisp = (ResultSet)oAttributeDisplay.getFieldValue(DisplayPropertyEnum.REPORT_DISPLAY_LIST);
+			oAttributeRepDisp.moveFirst();
+			String oDisplayForm = oAttributeRepDisp.getFieldValueString(DisplayPropertyEnum.ATTR_REPORT_DISPLAY);
+			printOut("AttributeForm = " + oDisplayForm);
+		}
+	oTemplateUnits.moveNext();
+	}
+oReportAxisRS.moveNext();
+}
 ]]>
 </CODE>
 <SAMPLE>EXECUTE PROCEDURE ListAttributeFormsInReport ("Profit Forecast", "\Public Objects\Reports\Subject Areas\Enterprise Performance Management", "MicroStrategy Tutorial");</SAMPLE>

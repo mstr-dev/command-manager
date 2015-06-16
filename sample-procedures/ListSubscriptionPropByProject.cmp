@@ -3,8 +3,13 @@
 <DESCRIPTION>This procedure will return all the subscirptions together with their properties in one project.</DESCRIPTION>
 <CODE><![CDATA[
 
-ResultSet Subscriptions=(ResultSet)executeCapture("LIST ALL SUBSCRIPTIONS FOR PROJECT \"" + sProjectName + "\";");Subscriptions.moveFirst();while(!Subscriptions.isEof()){	String SubscriptionID=Subscriptions.getFieldValueString(GUID);	execute ("LIST ALL PROPERTIES FOR SUBSCRIPTION GUID " + SubscriptionID + " For Project \"" + sProjectName + "\";");	Subscriptions.moveNext();}
-
+ResultSet Subscriptions=(ResultSet)executeCapture("LIST ALL SUBSCRIPTIONS FOR PROJECT \"" + sProjectName + "\";");
+Subscriptions.moveFirst();
+while(!Subscriptions.isEof()){
+	String SubscriptionID=Subscriptions.getFieldValueString(GUID);
+	execute ("LIST ALL PROPERTIES FOR SUBSCRIPTION GUID " + SubscriptionID + " For Project \"" + sProjectName + "\";");
+	Subscriptions.moveNext();
+}
 ]]>
 </CODE>
 <SAMPLE>execute procedure ListSubscriptionPropByProject ("MicroStrategy Tutorial");</SAMPLE>

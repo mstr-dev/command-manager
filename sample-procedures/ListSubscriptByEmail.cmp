@@ -3,8 +3,27 @@
 <DESCRIPTION/>
 <CODE><![CDATA[
 
-ResultSet Subscriptions=(ResultSet)executeCapture("LIST ALL SUBSCRIPTIONS FOR PROJECT \"MicroStrategy Tutorial\";");Subscriptions.moveFirst();while(!Subscriptions.isEof()){	boolean Flag=false;	String SubscriptionType=(String)Subscriptions.getFieldValue(SUBSCRIPTION_TYPE);	if (SubscriptionType.equals ("Email")){		ResultSet Recipients=(ResultSet)Subscriptions.getFieldValue(RECIPIENT_RESULTSET);	      	Recipients.moveFirst();		while(!Recipients.isEof()){			String RecipientAddress=Recipients.getFieldValueString(RECIPIENT_ADDRESS);			if (RecipientAddress.equals("[address1]"))				Flag=true;			Recipients.moveNext();			}		if (Flag){			String SubscriptionID=Subscriptions.getFieldValueString(GUID);			execute ("LIST ALL PROPERTIES FOR SUBSCRIPTION GUID " + SubscriptionID + " For Project \"MicroStrategy Tutorial\";");		}	}	Subscriptions.moveNext();}
-
+ResultSet Subscriptions=(ResultSet)executeCapture("LIST ALL SUBSCRIPTIONS FOR PROJECT \"MicroStrategy Tutorial\";");
+Subscriptions.moveFirst();
+while(!Subscriptions.isEof()){
+	boolean Flag=false;
+	String SubscriptionType=(String)Subscriptions.getFieldValue(SUBSCRIPTION_TYPE);
+	if (SubscriptionType.equals ("Email")){
+		ResultSet Recipients=(ResultSet)Subscriptions.getFieldValue(RECIPIENT_RESULTSET);
+	      	Recipients.moveFirst();
+		while(!Recipients.isEof()){
+			String RecipientAddress=Recipients.getFieldValueString(RECIPIENT_ADDRESS);
+			if (RecipientAddress.equals("[address1]"))
+				Flag=true;
+			Recipients.moveNext();	
+		}
+		if (Flag){
+			String SubscriptionID=Subscriptions.getFieldValueString(GUID);
+			execute ("LIST ALL PROPERTIES FOR SUBSCRIPTION GUID " + SubscriptionID + " For Project \"MicroStrategy Tutorial\";");
+		}
+	}
+	Subscriptions.moveNext();
+}
 ]]>
 </CODE>
 <SAMPLE/>

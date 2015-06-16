@@ -1,18 +1,44 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
 <PROCEDURE_DEFINITION>
-<DESCRIPTION/>
+<DESCRIPTION>This procedure will find out the subscriptions with the specified email address name, and then list the properties of these subscription.
+
+Parameter Needed: Address Name
+Output: The properties of the subscriptions</DESCRIPTION>
 <CODE><![CDATA[
 
-ResultSet Subscriptions=(ResultSet)executeCapture("LIST ALL SUBSCRIPTIONS FOR DELIVERYTYPE EMAIL FOR PROJECT \"MicroStrategy Tutorial\";");Subscriptions.moveFirst();while(!Subscriptions.isEof()){	boolean Flag=false;	String SubscriptionType=(String)Subscriptions.getFieldValue(SUBSCRIPTION_TYPE);	ResultSet Recipients=(ResultSet)Subscriptions.getFieldValue(RECIPIENT_RESULTSET);	Recipients.moveFirst();	while(!Recipients.isEof()){		String RecipientAddress=Recipients.getFieldValueString(RECIPIENT_ADDRESS);		if (RecipientAddress.equals("[address1]"))			Flag=true;		Recipients.moveNext();		}	if (Flag){		String SubscriptionID=Subscriptions.getFieldValueString(GUID);		execute ("LIST ALL PROPERTIES FOR SUBSCRIPTION GUID " + SubscriptionID + " For Project \"MicroStrategy Tutorial\";");	}	Subscriptions.moveNext();}
-
+ResultSet Subscriptions=(ResultSet)executeCapture("LIST ALL SUBSCRIPTIONS FOR DELIVERYTYPE EMAIL FOR PROJECT \"MicroStrategy Tutorial\";");
+Subscriptions.moveFirst();
+String SpecifiedAddress="[" + sAddress + "]";
+while(!Subscriptions.isEof()){
+	boolean Flag=false;
+	String SubscriptionType=(String)Subscriptions.getFieldValue(SUBSCRIPTION_TYPE);
+	ResultSet Recipients=(ResultSet)Subscriptions.getFieldValue(RECIPIENT_RESULTSET);
+	Recipients.moveFirst();
+	while(!Recipients.isEof()){
+		String RecipientAddress=Recipients.getFieldValueString(RECIPIENT_ADDRESS);	
+		if (RecipientAddress.equals(SpecifiedAddress))
+			Flag=true;
+		Recipients.moveNext();	
+	}
+	if (Flag){
+		String SubscriptionID=Subscriptions.getFieldValueString(GUID);
+		printOut(SubscriptionID);
+		execute ("LIST ALL PROPERTIES FOR SUBSCRIPTION GUID " + SubscriptionID + " For Project \"MicroStrategy Tutorial\";");
+	}
+	Subscriptions.moveNext();
+}
 ]]>
 </CODE>
-<SAMPLE/>
-<VERSION/>
+<SAMPLE>EXECUTE PROCEDURE ListSubscriptionByEmailName ("Address1");</SAMPLE>
+<VERSION>1.0</VERSION>
 <TYPE>CUSTOM</TYPE>
-<INPUT_PARAMS/>
+<INPUT_PARAMS>
+<INPUT INPUT_TYPE="STRING">sAddress</INPUT>
+</INPUT_PARAMS>
 <CLASSPATH/>
-<TEST_INPUT/>
+<TEST_INPUT>
+<TEST_INPUT_PARAM/>
+</TEST_INPUT>
 <TEST_CONNECTION_INFO>
 <TEST_PSN_NAME>MicroStrategy Analytics Modules</TEST_PSN_NAME>
 <TEST_USERNAME>administrator</TEST_USERNAME>

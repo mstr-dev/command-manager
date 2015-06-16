@@ -1,10 +1,27 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
 <PROCEDURE_DEFINITION>
-<DESCRIPTION/>
+<DESCRIPTION>This procedure is used to get the list of user logins and physical addresses in a specified group.
+
+Parameter Needed: Group Name
+Output: User Login, Physical Addresses</DESCRIPTION>
 <CODE><![CDATA[
 
-ResultSet USERS = executeCapture("LIST PROPERTIES FOR USERS IN GROUP " + "\"" +sGroup +"\"" + ";"); USERS.moveFirst();while(!USERS.isEof()){         String rLogin=USERS.getFieldValueString(LOGIN);         printOut("User Login = " + rLogin);         ResultSet rAddress=(ResultSet)USERS.getFieldValue(DS_ADDRESSES_RESULTSET);         rAddress.moveFirst();         //go through each address         while(!rAddress.isEof()){	String rPhyAdr = rAddress.getFieldValueString(DS_ADDRESS_PHYSICAL);	printOut("--------Physical Address: " + rPhyAdr);          rAddress.moveNext();          }        USERS.moveNext(); } 
+ResultSet USERS = executeCapture("LIST PROPERTIES FOR USERS IN GROUP " + "\"" +sGroup +"\"" + ";"); 
+USERS.moveFirst();
+while(!USERS.isEof()){
+         String rLogin=USERS.getFieldValueString(LOGIN);
+         printOut("User Login = " + rLogin);
+         ResultSet rAddress=(ResultSet)USERS.getFieldValue(DS_ADDRESSES_RESULTSET);
 
+         rAddress.moveFirst();
+         //go through each address
+         while(!rAddress.isEof()){
+	String rPhyAdr = rAddress.getFieldValueString(DS_ADDRESS_PHYSICAL);
+	printOut("--------Physical Address: " + rPhyAdr);
+          rAddress.moveNext();
+          }        
+USERS.moveNext();
+ } 
 ]]>
 </CODE>
 <SAMPLE>EXECUTE PROCEDURE ListLoginAndAddresses ("Customers");</SAMPLE>
