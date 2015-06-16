@@ -21,3 +21,6 @@ Steps to share:
 1. Fork this repo and clone it in your PC.
 1. Add your procedures based on your use cases.
 1. Send a pull request.
+
+###Disclaimer
+We do not guarantee or be responsible for the safety of these procedures. Please evaluate the risk before you use any of them. 
