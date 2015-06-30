@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<PROCEDURE_DEFINITION>
+<DESCRIPTION/>
+<CODE>ResultSet USERS = executeCapture("LIST MEMBERS FOR USER GROUP \"Everyone\";"); //Put whatever group to query here&#13;
+USERS.moveFirst();&#13;
+while(!USERS.isEof()){&#13;
+         ResultSet member=(ResultSet)USERS.getFieldValue(MEMBER_RESULTSET);&#13;
+         member.moveFirst();&#13;
+         //go through each members in the&#13;
+         while(!member.isEof()){&#13;
+                String USER = member.getFieldValueString(LOGIN);&#13;
+                String query = "ALTER USER " + "\"" + USER + "\"" + " LDAPLINK \"\";";&#13;
+                //execute(query);&#13;
+           printOut(USER + "has been altered!");&#13;
+          printOut(query);&#13;
+          member.moveNext();&#13;
+          }        &#13;
+USERS.moveNext();&#13;
+}&#13;
+</CODE>
+<SAMPLE/>
+<VERSION>1.0</VERSION>
+<TYPE>CUSTOM</TYPE>
+<INPUT_PARAMS/>
+<CLASSPATH/>
+<TEST_INPUT/>
+<TEST_CONNECTION_INFO>
+<TEST_PSN_NAME>MSTR_DEV</TEST_PSN_NAME>
+<TEST_USERNAME>administrator</TEST_USERNAME>
+<TEST_PASSWORD>0000000061b66bf76e3bf797267e7858137d537097836ed4effb084db9418a0274a1571c066fd58c786ac1522d22213f2d258265a69c2bf9</TEST_PASSWORD>
+</TEST_CONNECTION_INFO>
+</PROCEDURE_DEFINITION>
