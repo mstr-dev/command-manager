@@ -1,0 +1,1501 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<PROCEDURE_DEFINITION>
+<DESCRIPTION/>
+<CODE>final int DESCRIPTION = 0;
+final int WAREHOUSE = 1;
+final int STATUS = 2;
+final int SHOW_STATUS = 3;
+final int STATUSONTOP = 4;
+final int DOCDIRECTORY = 5;
+final int MAXNOATTRELEMS = 6;
+final int USEWHLOGINEXEC = 7;
+final int ENABLEOBJECTDELETION = 8;
+final int MAXREPORTEXECTIME = 9;
+final int MAXNOREPORTRESULTROWS = 10;
+final int MAXNOELEMROWS = 11;
+final int MAXNOINTRESULTROWS = 12;
+final int MAXJOBSUSERACCT = 13;
+final int MAXJOBSUSERSESSION = 14;
+final int MAXEXECJOBSUSER = 15;
+final int MAXJOBSPROJECT = 16;
+final int MAXUSERSESSIONSPROJECT = 17;
+final int PROJDRILLMAP = 18;
+final int REPORTTPL = 19;
+final int REPORTSHOWEMPTYTPL = 20;
+final int TEMPLATETPL = 21;
+final int TEMPLATESHOWEMPTYTPL = 22;
+final int METRICTPL = 23;
+final int METRICSHOWEMPTYTPL = 24;
+final int DOCUMENTTPL = 25;
+final int DOCUMENTSHOWEMPTYTPL = 26;
+final int USEDOCWIZARD = 27;
+final int INTELLIGENTCUBEFILEDIR = 28;
+final int CACHEENCRYPTION = 29;
+final int DISABLEAUTOMATICEXPIRATIONDYNAMICDATES = 30;
+final int RERUNMOBILESUBSCRIPTIONS = 31;
+final int RERUNEMAILSUBSCRIPTIONS = 32;
+final int DISABLECREATINGMATCHINGCACHES = 33;
+final int KEEPDOCUMENTFORMANIPULATION= 34;
+
+final int PDFHEADERLEFT =  35;
+final int PDFHEADERCENTER =  36;
+final int PDFHEADERRIGHT =  37;
+final int PDFFOOTERLEFT =  38;
+final int PDFFOOTERCENTER =  39;
+final int PDFFOOTERRIGHT =  40;
+final int EXPORT_HEADER =  41;
+final int EXPORT_FOOTER =  42;
+final int EXPORTCOMPATIBILITYMODE =  43;
+final int MERGEHEADERS =  44;
+final int EXPORTFLASHFORMAT =  45;
+final int CREATEUSERPROFILEATLOGIN =  46;
+final int REPORTDESCRIPTION =  47;
+final int PROMPTDETAILS =  48;
+final int FILTERDETAILS =  49;
+final int TEMPLATEDETAILS =  50;
+final int INCLUDEPROMPTTITLE =  51;
+final int REPLACEUNANSWEREDPROMPT =  52;
+final int SHOWATTRIBUTENAMEINPROMPT =  53;
+final int INCLUDEUNUSEDPROMPTS =  54;
+final int USEDELIMITERSINREPORTOBJECTS =  55;
+final int USEALIASESINFILTERSDETAILS =  56;
+final int REPORTFILTER =  57;
+final int REPORTFILTERNAME =  58;
+final int REPORTFILTERDESC =  59;
+final int REPORTLIMITS =  60;
+final int VIEWFILTER =  61;
+final int METRICQUALIFICATIONVIEWFILTER =  62;
+final int DRILLFILTER =  63;
+final int SECURITYFILTER =  64;
+final int INCLUDEFILTERTYPE =  65;
+final int SHOWEMPTYEXPRESSION =  66;
+final int NEWLINEAFTERTYPENAME =  67;
+final int NEWLINEBETWEENFILTER =  68;
+final int SHOWREPORTLIMITS =  69;
+final int EXPANDSHORCUTFILTERS =  70;
+final int SHOWATTRIBUTEINLISTCONDITIONS =  71;
+final int SEPARATORAFTERATTRNAME =  72;
+final int NEWLINEAFTERATTRNAME =  73;
+final int SEPARATORBETWEENLASTTWOELEMENTS =  74;
+final int NEWLINEBETWEENELEMENTS =  75;
+final int TRIMELEMENTS =  76;
+final int DISPLAYOPERATORS =  77;
+final int INCLUDEATTRFORMINCONDITION =  78;
+final int DYNAMICDATE =  79;
+final int NEWLINEBETWEENCONDITIONS =  80;
+final int LINESPACING =  81;
+final int PARENTHESESAROUNDCONDITIONS =  82;
+final int LOGICALOPBETWEENCONDITIONS =  83;
+final int UNITSFROM =  84;
+final int BASETEMPLATE =  85;
+final int TEMPLATEDESCRIPTION =  86;
+final int NONMETRICTEMPLATEUNITS =  87;
+final int METRICS =  88;
+final int ONLYCONDITIONAL =  89;
+final int FORMULA =  90;
+final int DIMENSIONALITY =  91;
+final int CONDITIONALITY =  92;
+final int TRANSFORMATION =  93;
+final int ALLOWDOCUMENTOVERWRITEWATERMARK =  94;
+final int WEBSERVERMACRO =  95;
+final int ENABLELINKSINMHT =  96;
+final int CUSTOMPROMPSTYLES =  97;
+final int DISPLAYATTRINALPHABETICALORDER =  98;
+final int ENABLEPERSONALANSWERS =  99;
+final int EXPORTPDFINHEBREW =  100;
+final int DEFAULTDATAMART =  101;
+final int CREATECUBESBYDATABASECONNECTION =  102;
+final int LOADCUBESONSTARTUP =  103;
+final int LOADCUBESONPUBLICATION =  104;
+final int SECURITYFILTERMERGER =  105;
+final int ATTRSHOWNUMERIC =  106;
+final int ATTRSHOWCHARACTER =  107;
+final int ATTRSHOWBINARY =  108;
+final int ATTRSHOWDATE =  109;
+final int ATTRSHOWBIGDECIMAL =  110;
+final int ATTRREPLACEUNDERSCORE =  111;
+final int ATTRREMOVEID =  112;
+final int ATTRFIRSTLETTERUPPERCASE =  113;
+final int ATTRIDSTRING =  114;
+final int ATTRDESCSTRING =  115;
+final int ATTRLOOKUPSTRING =  116;
+final int FACTSHOWNUMERIC =  117;
+final int FACTSHOWCHARACTER =  118;
+final int FACTSHOWBINARY =  119;
+final int FACTSHOWDATE =  120;
+final int FACTSHOWBIGDECIMAL =  121;
+final int FACTREPLACEUNDERSCORE =  122;
+final int FACTFIRSTLETTERUPPERCASE =  123;
+final int VERIFYCUSTOMCOLUMNNAME =  124;
+final int NULLDISPLAYWAREHOUSE =  125;
+final int NULLDISPLAYCROSSTABULATOR =  126;
+final int REPLACENULLWHENSORTED =  127;
+final int REPLACENULLWHENSORTEDVALUE =  128;
+final int NOTCALCULATEDDISPLAY =  129;
+final int MISSINGDISPLAY =  130;
+final int USEZEROFORGRAPHNULL =  131;
+final int GRAPHROUNDEDEFFECT =  132;
+final int EMPTYREPORTMESSAGE =  133;
+final int DISPLAYEMPTYMESSAGEINDOCUMENT =  134;
+final int KEEPPAGEBYWHENSAVING =  135;
+final int OVERWRITEWITHOLAPREPORTS =  136;
+final int MOVESORTKEYSWITHPIVOT =  137;
+final int APPENDEMAILFOOTER =  138;
+final int EMAILFOOTERTEXT =  139;
+final int ENABLEPRINTINGRANGE =  140;
+final int DELIVERSUBSCRIPTIONWITHNODATA =  141;
+final int DELIVERSUBSCRIPTIONWITHPARTIALRESULTS =  142;
+final int CHARACTERSET =  143;
+final int FONT =  144;
+final int OVERRIDEGRAPHTEMPLATEFONT =  145;
+final int DRILLIMMEDIATE =  146;
+final int SORTDRILLPATHS =  147;
+final int INTELLIGENTCUBEMAXNO =  148;
+final int INTELLIGENTCUBEMAXRAM =  149;
+final int INTERACTIVEJOBPERPROJECT =  150;
+final int MAXCACHEUPDATESUBSCRIPTIONS =  151;
+final int MAXEMAILSUBSCRIPTIONS =  152;
+final int MAXFILESIZEIMPORT =  153;
+final int MAXFILESUBSCRIPTIONS =  154;
+final int MAXHISTLISTSUBSCRIPTIONS =  155;
+final int MAXINTERACTIVESESSIONSPERUSER =  156;
+final int MAXMOBILESUBSCRIPTIONS =  157;
+final int MAXNODATAMARTRESULTROWS =  158;
+final int MAXNOINTELLIGENTCUBERESULTROWS =  159;
+final int MAXPRINTSUBSCRIPTIONS =  160;
+final int MAXQUOTAIMPORT =  161;
+final int MAXSCHEDULEREPORTEXECTIME =  162;
+final int SQLGENERATIONMEMORY =  163;
+final int WAITTIMEFORPROMPTANSWERS =  164;
+final int WAREHOUSEEXECUTIONTIME =  165;
+final int NOWATERMARK =  166;
+final int CUSTOMPROMPSTYLESNAME =  167;
+final int CUSTOMPROMPSTYLESDESC =  168;
+final int CUSTOMPROMPSTYLESBASESTYLE =  169;
+final int TEXT =  170;
+final int SIZEAUTOMATICALLY =  171;
+final int WASHOUT =  172;
+final int ORIENTATION =  173;
+final int SOURCE =  174;
+final int SCALE =  175;
+
+//define the array to hold those property keywords
+String[] KeyWords = new String[200];
+KeyWords[DESCRIPTION] = " DESCRIPTION ";
+KeyWords[WAREHOUSE] = " WAREHOUSE ";
+KeyWords[STATUS] = " STATUS ";
+KeyWords[SHOW_STATUS] = " SHOWSTATUS ";
+KeyWords[STATUSONTOP] = " STATUSONTOP ";
+KeyWords[DOCDIRECTORY] = " DOCDIRECTORY ";
+KeyWords[MAXNOATTRELEMS] = " MAXNOATTRELEMS ";
+KeyWords[USEWHLOGINEXEC] = " USEWHLOGINEXEC ";
+KeyWords[ENABLEOBJECTDELETION] = " ENABLEOBJECTDELETION ";
+KeyWords[MAXREPORTEXECTIME] = " MAXREPORTEXECTIME ";
+KeyWords[MAXNOREPORTRESULTROWS] = " MAXNOREPORTRESULTROWS ";
+KeyWords[MAXNOELEMROWS] = " MAXNOELEMROWS ";
+KeyWords[MAXNOINTRESULTROWS] = " MAXNOINTRESULTROWS ";
+KeyWords[MAXJOBSUSERACCT] = " MAXJOBSUSERACCT ";
+KeyWords[MAXJOBSUSERSESSION] = " MAXJOBSUSERSESSION ";
+KeyWords[MAXEXECJOBSUSER] = " MAXEXECJOBSUSER ";
+KeyWords[MAXJOBSPROJECT] = " MAXJOBSPROJECT ";
+KeyWords[MAXUSERSESSIONSPROJECT] = " MAXUSERSESSIONSPROJECT ";
+KeyWords[PROJDRILLMAP] = " PROJDRILLMAP ";
+KeyWords[REPORTTPL] = " REPORTTPL ";
+KeyWords[REPORTSHOWEMPTYTPL] = " REPORTSHOWEMPTYTPL ";
+KeyWords[TEMPLATETPL] = " TEMPLATETPL ";
+KeyWords[TEMPLATESHOWEMPTYTPL] = " TEMPLATESHOWEMPTYTPL ";
+KeyWords[METRICTPL] = " METRICTPL ";
+KeyWords[METRICSHOWEMPTYTPL] = " METRICSHOWEMPTYTPL ";
+KeyWords[DOCUMENTTPL] = " DOCTPL ";
+KeyWords[DOCUMENTSHOWEMPTYTPL] = " DOCSHOWEMPTYTPL ";
+KeyWords[USEDOCWIZARD] = " USEDOCWIZARD ";
+KeyWords[CACHEENCRYPTION] = " CACHEENCRYPTION ";
+KeyWords[DISABLEAUTOMATICEXPIRATIONDYNAMICDATES] = " DISABLEAUTOMATICEXPIRATIONDYNAMICDATES ";
+KeyWords[RERUNMOBILESUBSCRIPTIONS] = " RERUNMOBILESUBSCRIPTIONS ";
+KeyWords[RERUNEMAILSUBSCRIPTIONS] = " RERUNEMAILSUBSCRIPTIONS ";
+KeyWords[DISABLECREATINGMATCHINGCACHES] = " DISABLECREATINGMATCHINGCACHES ";
+KeyWords[KEEPDOCUMENTFORMANIPULATION] = " KEEPDOCUMENTFORMANIPULATION ";
+
+KeyWords[PDFHEADERLEFT] =  " PDFHEADERLEFT " ;
+KeyWords[PDFHEADERCENTER] =  " PDFHEADERCENTER " ;
+KeyWords[PDFHEADERRIGHT] =  " PDFHEADERRIGHT " ;
+KeyWords[PDFFOOTERLEFT] =  " PDFFOOTERLEFT " ;
+KeyWords[PDFFOOTERCENTER] =  " PDFFOOTERCENTER " ;
+KeyWords[PDFFOOTERRIGHT] =  " PDFFOOTERRIGHT " ;
+KeyWords[EXPORT_HEADER] =  " EXPORTHEADER " ;
+KeyWords[EXPORT_FOOTER] =  " EXPORTFOOTER " ;
+KeyWords[EXPORTCOMPATIBILITYMODE] =  " EXPORTCOMPATIBILITYMODE " ;
+KeyWords[MERGEHEADERS] =  " MERGEHEADERS " ;
+KeyWords[EXPORTFLASHFORMAT] =  " EXPORTFLASHFORMAT " ;
+KeyWords[CREATEUSERPROFILEATLOGIN] =  " CREATEUSERPROFILEATLOGIN " ;
+KeyWords[REPORTDESCRIPTION] =  " REPORTDESCRIPTION " ;
+KeyWords[PROMPTDETAILS] =  " PROMPTDETAILS " ;
+KeyWords[FILTERDETAILS] =  " FILTERDETAILS " ;
+KeyWords[TEMPLATEDETAILS] =  " TEMPLATEDETAILS " ;
+KeyWords[INCLUDEPROMPTTITLE] =  " INCLUDEPROMPTTITLE " ;
+KeyWords[REPLACEUNANSWEREDPROMPT] =  " REPLACEUNANSWEREDPROMPT " ;
+KeyWords[SHOWATTRIBUTENAMEINPROMPT] =  " SHOWATTRIBUTENAMEINPROMPT " ;
+KeyWords[INCLUDEUNUSEDPROMPTS] =  " INCLUDEUNUSEPROMPTS " ;
+KeyWords[USEDELIMITERSINREPORTOBJECTS] =  " USEDELIMITERSINREPORTOBJECTS " ;
+KeyWords[USEALIASESINFILTERSDETAILS] =  " USEALIASESINFILTERSDETAILS " ;
+KeyWords[REPORTFILTER] =  " REPORTFILTER " ;
+KeyWords[REPORTFILTERNAME] =  " REPORTFILTERNAME " ;
+KeyWords[REPORTFILTERDESC] =  " REPORTFILTERDESC " ;
+KeyWords[REPORTLIMITS] =  " REPORTLIMITS " ;
+KeyWords[VIEWFILTER] =  " VIEWFILTER " ;
+KeyWords[METRICQUALIFICATIONVIEWFILTER] =  " METRICQUALIFICATIONVIEWFILTER " ;
+KeyWords[DRILLFILTER] =  " DRILLFILTER " ;
+KeyWords[SECURITYFILTER] =  " SECURITYFILTER " ;
+KeyWords[INCLUDEFILTERTYPE] =  " INCLUDEFILTERTYPE " ;
+KeyWords[SHOWEMPTYEXPRESSION] =  " SHOWEMPTYEXPRESSION " ;
+KeyWords[NEWLINEAFTERTYPENAME] =  " NEWLINEAFTERTYPENAME " ;
+KeyWords[NEWLINEBETWEENFILTER] =  " NEWLINEBETWEENFILTER " ;
+KeyWords[SHOWREPORTLIMITS] =  " SHOWREPORTLIMITS " ;
+KeyWords[EXPANDSHORCUTFILTERS] =  " EXPANDSHORCUTFILTERS " ;
+KeyWords[SHOWATTRIBUTEINLISTCONDITIONS] =  " SHOWATTRIBUTEINLISTCONDITIONS " ;
+KeyWords[SEPARATORAFTERATTRNAME] =  " SEPARATORAFTERATTRNAME " ;
+KeyWords[NEWLINEAFTERATTRNAME] =  " NEWLINEAFTERATTRNAME " ;
+KeyWords[SEPARATORBETWEENLASTTWOELEMENTS] =  " SEPARATORBETWEENLASTTWOELEMENTS " ;
+KeyWords[NEWLINEBETWEENELEMENTS] =  " NEWLINEBETWEENELEMENTS " ;
+KeyWords[TRIMELEMENTS] =  " TRIMELEMENTS " ;
+KeyWords[DISPLAYOPERATORS] =  " DISPLAYOPERATORS " ;
+KeyWords[INCLUDEATTRFORMINCONDITION] =  " INCLUDEATTRFORMINCONDITION " ;
+KeyWords[DYNAMICDATE] =  " DYNAMICDATE " ;
+KeyWords[NEWLINEBETWEENCONDITIONS] =  " NEWLINEBETWEENCONDITIONS " ;
+KeyWords[LINESPACING] =  " LINESPACING " ;
+KeyWords[PARENTHESESAROUNDCONDITIONS] =  " PARENTHESESAROUNDCONDITIONS " ;
+KeyWords[LOGICALOPBETWEENCONDITIONS] =  " LOGICALOPBETWEENCONDITIONS " ;
+KeyWords[UNITSFROM] =  " UNITSFROM " ;
+KeyWords[BASETEMPLATE] =  " BASETEMPLATE " ;
+KeyWords[TEMPLATEDESCRIPTION] =  " TEMPLATEDESCRIPTION " ;
+KeyWords[NONMETRICTEMPLATEUNITS] =  " NONMETRICTEMPLATEUNITS " ;
+KeyWords[METRICS] =  " METRICS " ;
+KeyWords[ONLYCONDITIONAL] =  " ONLYCONDITIONAL " ;
+KeyWords[FORMULA] =  " FORMULA " ;
+KeyWords[DIMENSIONALITY] =  " DIMENSIONALITY " ;
+KeyWords[CONDITIONALITY] =  " CONDITIONALITY " ;
+KeyWords[TRANSFORMATION] =  " TRANSFORMATION " ;
+KeyWords[ALLOWDOCUMENTOVERWRITEWATERMARK] =  " ALLOWDOCUMENTOVERWRITEWATERMARK " ;
+KeyWords[WEBSERVERMACRO] =  " WEBSERVERMACRO " ;
+KeyWords[ENABLELINKSINMHT] =  " ENABLELINKSINMHT " ;
+KeyWords[CUSTOMPROMPSTYLES ] =  " CUSTOMPROMPSTYLES  " ;
+KeyWords[DISPLAYATTRINALPHABETICALORDER] =  " DISPLAYATTRINALPHABETICALORDER " ;
+KeyWords[ENABLEPERSONALANSWERS] =  " ENABLEPERSONALANSWERS " ;
+KeyWords[EXPORTPDFINHEBREW] =  " EXPORTPDFINHEBREW " ;
+KeyWords[DEFAULTDATAMART] =  " DEFAULTDATAMART " ;
+KeyWords[SECURITYFILTERMERGER] =  " SECURITYFILTERMERGER " ;
+KeyWords[ATTRSHOWNUMERIC] =  " ATTRSHOWNUMERIC " ;
+KeyWords[ATTRSHOWCHARACTER] =  " ATTRSHOWCHARACTER " ;
+KeyWords[ATTRSHOWBINARY] =  " ATTRSHOWBINARY " ;
+KeyWords[ATTRSHOWDATE] =  " ATTRSHOWDATE " ;
+KeyWords[ATTRSHOWBIGDECIMAL] =  " ATTRSHOWBIGDECIMAL " ;
+KeyWords[ATTRREPLACEUNDERSCORE] =  " ATTRREPLACEUNDERSCORE " ;
+KeyWords[ATTRREMOVEID] =  " ATTRREMOVEID " ;
+KeyWords[ATTRFIRSTLETTERUPPERCASE] =  " ATTRFIRSTLETTERUPPERCASE " ;
+KeyWords[ATTRIDSTRING] =  " ATTRIDSTRING " ;
+KeyWords[ATTRDESCSTRING] =  " ATTRDESCSTRING " ;
+KeyWords[ATTRLOOKUPSTRING] =  " ATTRLOOKUPSTRING " ;
+KeyWords[FACTSHOWNUMERIC] =  " FACTSHOWNUMERIC " ;
+KeyWords[FACTSHOWCHARACTER] =  " FACTSHOWCHARACTER " ;
+KeyWords[FACTSHOWBINARY] =  " FACTSHOWBINARY " ;
+KeyWords[FACTSHOWDATE] =  " FACTSHOWDATE " ;
+KeyWords[FACTSHOWBIGDECIMAL] =  " FACTSHOWBIGDECIMAL " ;
+KeyWords[FACTREPLACEUNDERSCORE] =  " FACTREPLACEUNDERSCORE " ;
+KeyWords[FACTFIRSTLETTERUPPERCASE] =  " FACTFIRSTLETTERUPPERCASE " ;
+KeyWords[VERIFYCUSTOMCOLUMNNAME] =  " VERIFYCUSTOMCOLUMNNAME " ;
+KeyWords[NULLDISPLAYWAREHOUSE] =  " NULLDISPLAYWAREHOUSE " ;
+KeyWords[NULLDISPLAYCROSSTABULATOR] =  " NULLDISPLAYCROSSTABULATOR " ;
+KeyWords[REPLACENULLWHENSORTED] =  " REPLACENULLWHENSORTED " ;
+KeyWords[REPLACENULLWHENSORTEDVALUE] =  " REPLACENULLWHENSORTEDVALUE " ;
+KeyWords[NOTCALCULATEDDISPLAY] =  " NOTCALCULATEDDISPLAY " ;
+KeyWords[MISSINGDISPLAY] =  " MISSINGDISPLAY " ;
+KeyWords[USEZEROFORGRAPHNULL] =  " USEZEROFORGRAPHNULL " ;
+KeyWords[GRAPHROUNDEDEFFECT] =  " GRAPHROUNDEDEFFECT " ;
+KeyWords[EMPTYREPORTMESSAGE] =  " EMPTYREPORTMESSAGE " ;
+KeyWords[DISPLAYEMPTYMESSAGEINDOCUMENT] =  " DISPLAYEMPTYMESSAGEINDOCUMENT " ;
+KeyWords[KEEPPAGEBYWHENSAVING] =  " KEEPPAGEBYWHENSAVING " ;
+KeyWords[OVERWRITEWITHOLAPREPORTS] =  " OVERWRITEWITHOLAPREPORTS " ;
+KeyWords[MOVESORTKEYSWITHPIVOT] =  " MOVESORTKEYSWITHPIVOT " ;
+KeyWords[APPENDEMAILFOOTER] =  " APPENDEMAILFOOTER " ;
+KeyWords[EMAILFOOTERTEXT] =  " EMAILFOOTERTEXT " ;
+KeyWords[ENABLEPRINTINGRANGE] =  " ENABLEPRINTINGRANGE " ;
+KeyWords[DELIVERSUBSCRIPTIONWITHNODATA] =  " DELIVERSUBSCRIPTIONWITHNODATA " ;
+KeyWords[DELIVERSUBSCRIPTIONWITHPARTIALRESULTS] =  " DELIVERSUBSCRIPTIONWITHPARTIALRESULTS " ;
+KeyWords[CREATECUBESBYDATABASECONNECTION] =  " CREATECUBESBYDATABASECONNECTION " ;
+KeyWords[LOADCUBESONSTARTUP] =  " LOADCUBESONSTARTUP " ;
+KeyWords[LOADCUBESONPUBLICATION] =  " LOADCUBESONPUBLICATION " ;
+KeyWords[CHARACTERSET] =  " CHARACTERSET " ;
+KeyWords[FONT] =  " FONT " ;
+KeyWords[OVERRIDEGRAPHTEMPLATEFONT  ] =  " OVERRIDEGRAPHTEMPLATEFONT " ;
+KeyWords[DRILLIMMEDIATE] =  " DRILLIMMEDIATE " ;
+KeyWords[INTELLIGENTCUBEMAXNO] =  " INTELLIGENTCUBEMAXNO " ;
+KeyWords[INTELLIGENTCUBEMAXRAM] =  " INTELLIGENTCUBEMAXRAM " ;
+KeyWords[INTERACTIVEJOBPERPROJECT] =  " INTERACTIVEJOBPERPROJECT " ;
+KeyWords[MAXCACHEUPDATESUBSCRIPTIONS] =  " MAXCACHEUPDATESUBSCRIPTIONS " ;
+KeyWords[MAXEMAILSUBSCRIPTIONS] =  " MAXEMAILSUBSCRIPTIONS " ;
+KeyWords[MAXFILESIZEIMPORT] =  " MAXFILESIZEIMPORT " ;
+KeyWords[MAXFILESUBSCRIPTIONS] =  " MAXFILESUBSCRIPTIONS " ;
+KeyWords[MAXHISTLISTSUBSCRIPTIONS] =  " MAXHISTLISTSUBSCRIPTIONS " ;
+KeyWords[MAXINTERACTIVESESSIONSPERUSER] =  " MAXINTERACTIVESESSIONSPERUSER " ;
+KeyWords[MAXMOBILESUBSCRIPTIONS] =  " MAXMOBILESUBSCRIPTIONS " ;
+KeyWords[MAXNODATAMARTRESULTROWS] =  " MAXNODATAMARTRESULTROWS " ;
+KeyWords[MAXNOINTELLIGENTCUBERESULTROWS] =  " MAXNOINTELLIGENTCUBERESULTROWS " ;
+KeyWords[MAXPRINTSUBSCRIPTIONS] =  " MAXPRINTSUBSCRIPTIONS " ;
+KeyWords[MAXQUOTAIMPORT] =  " MAXQUOTAIMPORT " ;
+KeyWords[MAXSCHEDULEREPORTEXECTIME] =  " MAXSCHEDULEREPORTEXECTIME " ;
+KeyWords[NOWATERMARK] =  " NOWATERMARK " ;
+KeyWords[SORTDRILLPATHS] =  " SORTDRILLPATHS " ;
+KeyWords[SQLGENERATIONMEMORY] =  " SQLGENERATIONMEMORY " ;
+KeyWords[WAITTIMEFORPROMPTANSWERS] =  " WAITTIMEFORPROMPTANSWERS " ;
+KeyWords[WAREHOUSEEXECUTIONTIME] =  " WAREHOUSEEXECUTIONTIME " ;
+KeyWords[CUSTOMPROMPSTYLESNAME] =  " NAME " ;
+KeyWords[CUSTOMPROMPSTYLESDESC] =  " DESCRIPTION " ;
+KeyWords[CUSTOMPROMPSTYLESBASESTYLE] =  " BASESTYLE " ;
+KeyWords[TEXT] =  " TEXT " ;
+KeyWords[SIZEAUTOMATICALLY] =  " SIZEAUTOMATICALLY " ;
+KeyWords[WASHOUT] =  " WASHOUT " ;
+KeyWords[ORIENTATION] =  " ORIENTATION " ;
+KeyWords[SOURCE] =  " SOURCE " ;
+KeyWords[SCALE] =  " SCALE " ;
+KeyWords[INTELLIGENTCUBEFILEDIR] =  " INTELLIGENTCUBEFILEDIR " ;
+
+//Now Build the information array
+Object b = null;
+String[] Inputs = new String[200];
+//String projectName = "MicroStrategy Tutorial";
+
+ResultSet projectsNames = executeCapture("LIST ALL PROJECTS;");
+projectsNames.moveFirst();
+
+for (int i = 0; i &lt; projectsNames.getRowCount(); i++, projectsNames.moveNext()) {
+
+String projectName = projectsNames.getFieldValueString(NAME);
+String projectAT = projectsNames.getFieldValueString(2);
+
+if (projectAT.equals("Loaded")) {
+
+ResultSet lResultSetP = executeCapture("LIST ALL PROPERTIES FOR PROJECT CONFIGURATION FROM PROJECT  \"" + projectName + "\";");
+lResultSetP.moveFirst();
+Inputs[DESCRIPTION] = lResultSetP.getFieldValueString(DisplayPropertyEnum.DESCRIPTION);
+
+//warehouse
+ResultSet lDBInstanceResultSet =  (ResultSet)lResultSetP.getFieldValue(DisplayPropertyEnum.DATABASE_INSTANCE_RESULT_SET);
+lDBInstanceResultSet.moveFirst();
+Inputs[WAREHOUSE] = lDBInstanceResultSet.getFieldValueString(DisplayPropertyEnum.WAREHOUSE);
+b = lDBInstanceResultSet.getFieldValue(DisplayPropertyEnum.USEWHLOGINEXEC);
+Inputs[USEWHLOGINEXEC] = b.toString();
+
+//Project Status
+ResultSet lStatusResultSet = (ResultSet)lResultSetP.getFieldValue(DisplayPropertyEnum.PROJECT_STATUS_RESULT_SET);
+lStatusResultSet.moveFirst();
+Inputs[STATUS] = lStatusResultSet.getFieldValueString(DisplayPropertyEnum.PROJECT_STATUS);
+b =  lStatusResultSet.getFieldValue(DisplayPropertyEnum.SHOW_STATUS);
+Inputs[SHOW_STATUS] = b.toString();
+b =  lStatusResultSet.getFieldValue(DisplayPropertyEnum.STATUSONTOP);
+Inputs[STATUSONTOP] = b.toString();
+
+//Advance setting
+ResultSet lAdvanceResultSet = (ResultSet)lResultSetP.getFieldValue(DisplayPropertyEnum.ADVANCED_RESULT_SET);
+lAdvanceResultSet.moveFirst();
+Inputs[DOCDIRECTORY] = lAdvanceResultSet.getFieldValueString(DisplayPropertyEnum.DOCDIRECTORY);
+Inputs[MAXNOATTRELEMS] = lAdvanceResultSet.getFieldValueString(DisplayPropertyEnum.MAXNOATTRELEMS);
+b = lAdvanceResultSet.getFieldValue(DisplayPropertyEnum.ENABLEOBJECTDELETION);
+if (b != null){
+	Inputs[ENABLEOBJECTDELETION] = b.toString();
+}else{
+	Inputs[ENABLEOBJECTDELETION] = "FALSE";
+}
+
+b = lAdvanceResultSet.getFieldValue(DisplayPropertyEnum.DISPLAY_ATTRIBUTE_HIERARCHY_PROMPT);Inputs[DISPLAYATTRINALPHABETICALORDER] =   (b != null) ? b.toString() : "false";
+b = lAdvanceResultSet.getFieldValue(DisplayPropertyEnum.ENABLEPERSONALANSWERS);Inputs[ENABLEPERSONALANSWERS] =   (b != null) ? b.toString() : "false";
+//Advanced customer style
+ResultSet lCustomerStyleAdvanceResultSet =  (ResultSet)lAdvanceResultSet.getFieldValue(DisplayPropertyEnum.CUSTOMPROMPTSTYLE_RESULT_SET);
+/*lCustomerStyleAdvanceResultSet.moveFirst();		
+Inputs[CUSTOMPROMPSTYLES] =  lCustomerStyleAdvanceResultSet.getFieldValueString(DisplayPropertyEnum.CUSTOMPROMPTSTYLE_TYPE);
+Inputs[CUSTOMPROMPSTYLESNAME] =  lCustomerStyleAdvanceResultSet.getFieldValueString(DisplayPropertyEnum.CUSTOMPROMPTSTYLE_NAME);
+Inputs[CUSTOMPROMPSTYLESDESC] =  lCustomerStyleAdvanceResultSet.getFieldValueString(DisplayPropertyEnum.CUSTOMPROMPTSTYLE_DESCRIPTION);
+Inputs[CUSTOMPROMPSTYLESBASESTYLE] =  lCustomerStyleAdvanceResultSet.getFieldValueString(DisplayPropertyEnum.CUSTOMPROMPTSTYLE_BASE_STYLE);*/
+
+//Governing
+ResultSet lGoverningResultSet = (ResultSet)lResultSetP.getFieldValue(DisplayPropertyEnum.GOVERNING_RESULT_SET);
+lGoverningResultSet.moveFirst();
+Inputs[MAXREPORTEXECTIME] = lGoverningResultSet.getFieldValueString(DisplayPropertyEnum.MAXREPORTEXECTIME);
+Inputs[MAXNOREPORTRESULTROWS] = lGoverningResultSet.getFieldValueString(DisplayPropertyEnum.MAXNOREPORTRESULTROWS);
+Inputs[MAXNOELEMROWS] = lGoverningResultSet.getFieldValueString(DisplayPropertyEnum.MAXNOELEMROWS);
+Inputs[MAXNOINTRESULTROWS] = lGoverningResultSet.getFieldValueString(DisplayPropertyEnum.MAXNOINTRESULTROWS);
+Inputs[MAXJOBSUSERACCT] = lGoverningResultSet.getFieldValueString(DisplayPropertyEnum.MAXJOBSUSERACCT);
+Inputs[MAXJOBSUSERSESSION] = lGoverningResultSet.getFieldValueString(DisplayPropertyEnum.MAXJOBSUSERSESSION);
+Inputs[MAXEXECJOBSUSER] = lGoverningResultSet.getFieldValueString(DisplayPropertyEnum.MAXEXECJOBSUSER);
+Inputs[MAXJOBSPROJECT] = lGoverningResultSet.getFieldValueString(DisplayPropertyEnum.MAXJOBSPROJECT);
+Inputs[MAXUSERSESSIONSPROJECT] = lGoverningResultSet.getFieldValueString(DisplayPropertyEnum.MAXUSERSESSIONSPROJECT);			
+
+Inputs[INTERACTIVEJOBPERPROJECT] =  lGoverningResultSet.getFieldValueString(DisplayPropertyEnum.INTERACTIVEJOBPERPROJECT);
+Inputs[MAXCACHEUPDATESUBSCRIPTIONS] =  lGoverningResultSet.getFieldValueString(DisplayPropertyEnum.MAXCACHEUPDATESUBSCRIPTIONS);
+
+//ProjectDrillMap
+ResultSet lProDrillMapResultSet = (ResultSet)lResultSetP.getFieldValue(DisplayPropertyEnum.DRILLING_RESULT_SET);
+if (lProDrillMapResultSet != null){
+	lProDrillMapResultSet.moveFirst();
+	String s = lProDrillMapResultSet.getFieldValueString(DisplayPropertyEnum.DRILLING);
+	if (s!=null){
+		Inputs[PROJDRILLMAP] = s;
+	}else{
+		Inputs[PROJDRILLMAP] = "";
+	}
+}else{
+	Inputs[PROJDRILLMAP] = "";
+}
+Inputs[DRILLIMMEDIATE] =  lProDrillMapResultSet.getFieldValueString(DisplayPropertyEnum.DRILL_TO_IMMEDIATE);
+b = lProDrillMapResultSet.getFieldValue(DisplayPropertyEnum.DRILL_SORT_OPTION);
+Inputs[SORTDRILLPATHS] =   (b != null) ? b.toString() : "false";	
+
+//Cache
+ResultSet lCacheResultSet =  (ResultSet)lResultSetP.getFieldValue(DisplayPropertyEnum.CACHING_RESULT_SET);
+lCacheResultSet.moveFirst();
+Inputs[CACHEENCRYPTION] = lCacheResultSet.getFieldValueString(DisplayPropertyEnum.CACHEENCRYPTION);
+b = lCacheResultSet.getFieldValue(DisplayPropertyEnum.DISABLEAUTOMATICEXPIRATIONDYNAMICDATES);
+Inputs[DISABLEAUTOMATICEXPIRATIONDYNAMICDATES] = b.toString();
+b = lCacheResultSet.getFieldValue(DisplayPropertyEnum.RERUNMOBILESUBSCRIPTIONS);
+Inputs[RERUNMOBILESUBSCRIPTIONS] = b.toString();
+b = lCacheResultSet.getFieldValue(DisplayPropertyEnum.RERUNEMAILSUBSCRIPTIONS);
+Inputs[RERUNEMAILSUBSCRIPTIONS] = b.toString();
+b = lCacheResultSet.getFieldValue(DisplayPropertyEnum.DISABLECREATINGMATCHINGCACHES);
+Inputs[DISABLECREATINGMATCHINGCACHES] = b.toString();
+b = lCacheResultSet.getFieldValue(DisplayPropertyEnum.KEEPDOCUMENTFORMANIPULATION);
+Inputs[KEEPDOCUMENTFORMANIPULATION] = b.toString();		
+
+//PDF setting		
+ResultSet lPDFSettingResultSet =  (ResultSet)lResultSetP.getFieldValue(DisplayPropertyEnum.PDF_SETTINGS_RESULT_SET);
+lPDFSettingResultSet.moveFirst();
+Inputs[PDFHEADERLEFT] =  lPDFSettingResultSet.getFieldValueString(DisplayPropertyEnum.PDFHEADERLEFT);
+Inputs[PDFHEADERCENTER] =  lPDFSettingResultSet.getFieldValueString(DisplayPropertyEnum.PDFHEADERCENTER);
+Inputs[PDFHEADERRIGHT] =  lPDFSettingResultSet.getFieldValueString(DisplayPropertyEnum.PDFHEADERRIGHT);
+Inputs[PDFFOOTERLEFT] =  lPDFSettingResultSet.getFieldValueString(DisplayPropertyEnum.PDFFOOTERLEFT);
+Inputs[PDFFOOTERCENTER] =  lPDFSettingResultSet.getFieldValueString(DisplayPropertyEnum.PDFFOOTERCENTER);
+Inputs[PDFFOOTERRIGHT] =  lPDFSettingResultSet.getFieldValueString(DisplayPropertyEnum.PDFFOOTERRIGHT);
+//Export Setting		
+ResultSet lExportSettingResultSet =  (ResultSet)lResultSetP.getFieldValue(DisplayPropertyEnum.EXPORT_SETTING_RESULT_SET);
+lExportSettingResultSet.moveFirst();
+Inputs[EXPORT_HEADER] =  lExportSettingResultSet.getFieldValueString(DisplayPropertyEnum.EXPORT_HEADER);
+Inputs[EXPORT_FOOTER] =  lExportSettingResultSet.getFieldValueString(DisplayPropertyEnum.EXPORT_FOOTER);
+Inputs[EXPORTCOMPATIBILITYMODE] =  lExportSettingResultSet.getFieldValue(DisplayPropertyEnum.EXPORTCOMPATIBILITYMODE).toString();
+Inputs[MERGEHEADERS] =  ((Object)lExportSettingResultSet.getFieldValue(DisplayPropertyEnum.MERGEHEADERS)).toString();
+Inputs[EXPORTFLASHFORMAT] =  lExportSettingResultSet.getFieldValueString(DisplayPropertyEnum.EXPORTFLASHFORMAT);
+//User Profile
+Inputs[CREATEUSERPROFILEATLOGIN] = ((Object)lResultSetP.getFieldValue(DisplayPropertyEnum.CREATE_USER_PROFILE_AT_LOGIN)).toString();
+
+//Document and Report 
+ResultSet lDocAndRepResultSet =  (ResultSet)lResultSetP.getFieldValue(DisplayPropertyEnum.DOCUMENTS_AND_REPORTS_RESULT_SET);
+lDocAndRepResultSet.moveFirst();
+
+//Details property
+ResultSet lDetailDocAndRepResultSet =  (ResultSet)lDocAndRepResultSet.getFieldValue(DisplayPropertyEnum.REPORT_DETAILS_RESULT_SET);
+lDetailDocAndRepResultSet.moveFirst();
+
+b = lDetailDocAndRepResultSet.getFieldValue(DisplayPropertyEnum.REPORTDESCRIPTION);
+Inputs[REPORTDESCRIPTION] =   (b != null) ? b.toString() : "false";
+b = lDetailDocAndRepResultSet.getFieldValue(DisplayPropertyEnum.PROMPTDETAILS);
+Inputs[PROMPTDETAILS] =   (b != null) ? b.toString() : "false";
+b = lDetailDocAndRepResultSet.getFieldValue(DisplayPropertyEnum.FILTERDETAILS);
+Inputs[FILTERDETAILS] =   (b != null) ? b.toString() : "false";
+b = lDetailDocAndRepResultSet.getFieldValue(DisplayPropertyEnum.TEMPLATEDETAILS);
+Inputs[TEMPLATEDETAILS] =   (b != null) ? b.toString() : "false";
+b = lDetailDocAndRepResultSet.getFieldValue(DisplayPropertyEnum.INCLUDEPROMPTTITLE);
+Inputs[INCLUDEPROMPTTITLE] =   (b != null) ? b.toString() : "false";
+//As allnone is shown as "all none" in the script, remove all the spaces.
+Inputs[REPLACEUNANSWEREDPROMPT] =  lDetailDocAndRepResultSet.getFieldValueString(DisplayPropertyEnum.REPLACEUNANSWEREDPROMPT).replaceAll(" ", "").toUpperCase();
+Inputs[SHOWATTRIBUTENAMEINPROMPT] =  lDetailDocAndRepResultSet.getFieldValueString(DisplayPropertyEnum.SHOWATTRIBUTENAMEINPROMPT);
+b = lDetailDocAndRepResultSet.getFieldValue(DisplayPropertyEnum.INCLUDEUNUSEDPROMPTS);
+Inputs[INCLUDEUNUSEDPROMPTS] =   (b != null) ? b.toString() : "false";
+Inputs[USEDELIMITERSINREPORTOBJECTS] =  lDetailDocAndRepResultSet.getFieldValueString(DisplayPropertyEnum.USEDELIMITERSINREPORTOBJECTS);
+b = lDetailDocAndRepResultSet.getFieldValue(DisplayPropertyEnum.USEALIASESINFILTERSDETAILS);
+Inputs[USEALIASESINFILTERSDETAILS] =   (b != null) ? b.toString() : "false";
+b = lDetailDocAndRepResultSet.getFieldValue(DisplayPropertyEnum.REPORTFILTER);
+Inputs[REPORTFILTER] =   (b != null) ? b.toString() : "false";
+Inputs[REPORTFILTERNAME] =  lDetailDocAndRepResultSet.getFieldValueString(DisplayPropertyEnum.REPORTFILTERNAME);
+b = lDetailDocAndRepResultSet.getFieldValue(DisplayPropertyEnum.REPORTFILTERDESC);
+Inputs[REPORTFILTERDESC] =   (b != null) ? b.toString() : "false";
+b = lDetailDocAndRepResultSet.getFieldValue(DisplayPropertyEnum.REPORTLIMITS);
+Inputs[REPORTLIMITS] =   (b != null) ? b.toString() : "false";
+b = lDetailDocAndRepResultSet.getFieldValue(DisplayPropertyEnum.VIEWFILTER);
+Inputs[VIEWFILTER] =   (b != null) ? b.toString() : "false";
+b = lDetailDocAndRepResultSet.getFieldValue(DisplayPropertyEnum.METRICQUALIFICATIONVIEWFILTER);
+Inputs[METRICQUALIFICATIONVIEWFILTER] =   (b != null) ? b.toString() : "false";
+b = lDetailDocAndRepResultSet.getFieldValue(DisplayPropertyEnum.DRILLFILTER);
+Inputs[DRILLFILTER] =   (b != null) ? b.toString() : "false";
+b = lDetailDocAndRepResultSet.getFieldValue(DisplayPropertyEnum.SECURITYFILTER);
+Inputs[SECURITYFILTER] =   (b != null) ? b.toString() : "false";
+b = lDetailDocAndRepResultSet.getFieldValue(DisplayPropertyEnum.INCLUDEFILTERTYPE);
+Inputs[INCLUDEFILTERTYPE] =   (b != null) ? b.toString() : "false";
+b = lDetailDocAndRepResultSet.getFieldValue(DisplayPropertyEnum.SHOWEMPTYEXPRESSION);
+Inputs[SHOWEMPTYEXPRESSION] =   (b != null) ? b.toString() : "false";
+b = lDetailDocAndRepResultSet.getFieldValue(DisplayPropertyEnum.NEWLINEAFTERTYPENAME);
+Inputs[NEWLINEAFTERTYPENAME] =   (b != null) ? b.toString() : "false";
+b = lDetailDocAndRepResultSet.getFieldValue(DisplayPropertyEnum.NEWLINEBETWEENFILTER);
+Inputs[NEWLINEBETWEENFILTER] =   (b != null) ? b.toString() : "false";
+Inputs[SHOWREPORTLIMITS] =  lDetailDocAndRepResultSet.getFieldValueString(DisplayPropertyEnum.SHOWREPORTLIMITS).replaceAll(" ", "");
+Inputs[EXPANDSHORCUTFILTERS] =  lDetailDocAndRepResultSet.getFieldValueString(DisplayPropertyEnum.EXPANDSHORCUTFILTERS).replaceAll(" ", "");;
+Inputs[SHOWATTRIBUTEINLISTCONDITIONS] =  lDetailDocAndRepResultSet.getFieldValueString(DisplayPropertyEnum.SHOWATTRIBUTEINLISTCONDITIONS);
+Inputs[SEPARATORAFTERATTRNAME] =  lDetailDocAndRepResultSet.getFieldValueString(DisplayPropertyEnum.SEPARATORAFTERATTRNAME);
+b = lDetailDocAndRepResultSet.getFieldValue(DisplayPropertyEnum.NEWLINEAFTERATTRNAME);
+Inputs[NEWLINEAFTERATTRNAME] =   (b != null) ? b.toString() : "false";
+Inputs[SEPARATORBETWEENLASTTWOELEMENTS] =  lDetailDocAndRepResultSet.getFieldValueString(DisplayPropertyEnum.SEPARATORBETWEENLASTTWOELEMENTS);
+b = lDetailDocAndRepResultSet.getFieldValue(DisplayPropertyEnum.NEWLINEBETWEENELEMENTS);
+Inputs[NEWLINEBETWEENELEMENTS] =   (b != null) ? b.toString() : "false";
+b = lDetailDocAndRepResultSet.getFieldValue(DisplayPropertyEnum.TRIMELEMENTS);
+Inputs[TRIMELEMENTS] =   (b != null) ? b.toString() : "false";
+Inputs[DISPLAYOPERATORS] =  lDetailDocAndRepResultSet.getFieldValueString(DisplayPropertyEnum.DISPLAYOPERATORS);
+b = lDetailDocAndRepResultSet.getFieldValue(DisplayPropertyEnum.INCLUDEATTRFORMINCONDITION);
+Inputs[INCLUDEATTRFORMINCONDITION] =   (b != null) ? b.toString() : "false";
+//As ShowDate is shown as "show date" in the generated script, remove all the spaces.
+Inputs[DYNAMICDATE] =  lDetailDocAndRepResultSet.getFieldValueString(DisplayPropertyEnum.DYNAMICDATE).replaceAll(" ", "").toUpperCase();
+Inputs[NEWLINEBETWEENCONDITIONS] =  lDetailDocAndRepResultSet.getFieldValueString(DisplayPropertyEnum.NEWLINEBETWEENCONDITIONS);
+Inputs[LINESPACING] =  lDetailDocAndRepResultSet.getFieldValueString(DisplayPropertyEnum.LINESPACING).replaceAll(" ", "");;
+Inputs[PARENTHESESAROUNDCONDITIONS] =  lDetailDocAndRepResultSet.getFieldValueString(DisplayPropertyEnum.PARENTHESESAROUNDCONDITIONS);
+Inputs[LOGICALOPBETWEENCONDITIONS] =  lDetailDocAndRepResultSet.getFieldValueString(DisplayPropertyEnum.LOGICALOPBETWEENCONDITIONS);
+Inputs[UNITSFROM] =  lDetailDocAndRepResultSet.getFieldValueString(DisplayPropertyEnum.UNITSFROM);
+Inputs[BASETEMPLATE] =  lDetailDocAndRepResultSet.getFieldValueString(DisplayPropertyEnum.BASETEMPLATE);
+b = lDetailDocAndRepResultSet.getFieldValue(DisplayPropertyEnum.TEMPLATEDESCRIPTION);
+Inputs[TEMPLATEDESCRIPTION] =   (b != null) ? b.toString() : "false";
+b = lDetailDocAndRepResultSet.getFieldValue(DisplayPropertyEnum.NONMETRICTEMPLATEUNITS);
+Inputs[NONMETRICTEMPLATEUNITS] =   (b != null) ? b.toString() : "false";
+b = lDetailDocAndRepResultSet.getFieldValue(DisplayPropertyEnum.METRICS);
+Inputs[METRICS] =   (b != null) ? b.toString() : "false";
+b = lDetailDocAndRepResultSet.getFieldValue(DisplayPropertyEnum.ONLYCONDITIONAL);
+Inputs[ONLYCONDITIONAL] =   (b != null) ? b.toString() : "false";
+b = lDetailDocAndRepResultSet.getFieldValue(DisplayPropertyEnum.FORMULAFILTERDETAILS);
+Inputs[FORMULA] =   (b != null) ? b.toString() : "false";
+b = lDetailDocAndRepResultSet.getFieldValue(DisplayPropertyEnum.DIMENSIONALITYFILTERDETAILS);
+Inputs[DIMENSIONALITY] =   (b != null) ? b.toString() : "false";
+b = lDetailDocAndRepResultSet.getFieldValue(DisplayPropertyEnum.CONDITIONALITYFILTERDETAILS);
+Inputs[CONDITIONALITY] =   (b != null) ? b.toString() : "false";
+b = lDetailDocAndRepResultSet.getFieldValue(DisplayPropertyEnum.TRANSFORMATIONFILTERDETAILS);
+Inputs[TRANSFORMATION] =   (b != null) ? b.toString() : "false";
+
+//Watermark property
+ResultSet lWatermarkDocAndRepResultSet =  (ResultSet)lDocAndRepResultSet.getFieldValue(DisplayPropertyEnum.WATERMARK_RESULT_SET);
+lWatermarkDocAndRepResultSet.moveFirst();
+
+Inputs[NOWATERMARK] =  lWatermarkDocAndRepResultSet.getFieldValueString(DisplayPropertyEnum.WATERMARK_TYPE).replaceAll(" ", "").toUpperCase();
+
+Inputs[TEXT] =  lWatermarkDocAndRepResultSet.getFieldValueString(DisplayPropertyEnum.WATERMARK_TEXT);
+b = lWatermarkDocAndRepResultSet.getFieldValue(DisplayPropertyEnum.WATERMARK_AUTO_FONT);
+Inputs[SIZEAUTOMATICALLY] =   (b != null) ? b.toString() : "false";
+b = lWatermarkDocAndRepResultSet.getFieldValue(DisplayPropertyEnum.WATERMARK_TEXT_WASHOUT);
+Inputs[WASHOUT] =   (b != null) ? b.toString() : "false";
+Inputs[ORIENTATION] =  lWatermarkDocAndRepResultSet.getFieldValueString(DisplayPropertyEnum.WATERMARK_TEXT_ORIENTATION);
+Inputs[SOURCE] =  lWatermarkDocAndRepResultSet.getFieldValueString(DisplayPropertyEnum.WATERMARK_IMAGE_SOURCE);
+Inputs[SCALE] =  lWatermarkDocAndRepResultSet.getFieldValueString(DisplayPropertyEnum.WATERMARK_IMAGE_SCALE);
+ 
+b = lWatermarkDocAndRepResultSet.getFieldValue(DisplayPropertyEnum.WATERMARK_DOCUMENT_CAN_OVERWRITE);
+Inputs[ALLOWDOCUMENTOVERWRITEWATERMARK] =   (b != null) ? b.toString() : "false";
+
+Inputs[WEBSERVERMACRO] =  lDocAndRepResultSet.getFieldValueString(DisplayPropertyEnum.WEBSERVER_MACRO);
+
+b = lDocAndRepResultSet.getFieldValue(DisplayPropertyEnum.ENABLES_LINKS_FLASH);
+Inputs[ENABLELINKSINMHT] =   (b != null) ? b.toString() : "false";		
+
+//Right To Left		
+Inputs[EXPORTPDFINHEBREW] =  ((Object)lResultSetP.getFieldValue(DisplayPropertyEnum.RIGHT_TO_LEFT)).toString();
+
+//Database
+ResultSet lDatabaseResultSet =  (ResultSet)lResultSetP.getFieldValue(DisplayPropertyEnum.DATABASE_INSTANCE_RESULT_SET);
+lDatabaseResultSet.moveFirst();
+Inputs[DEFAULTDATAMART] =  lDatabaseResultSet.getFieldValueString(DisplayPropertyEnum.DEFAULT_DATAMART);
+
+//Intelligence Cube
+ResultSet lIntellCubeResultSet =  (ResultSet)lResultSetP.getFieldValue(DisplayPropertyEnum.INTELLIGENT_CUBES_RESULT_SET);
+lIntellCubeResultSet.moveFirst();
+
+b = lIntellCubeResultSet.getFieldValue(DisplayPropertyEnum.CREATECUBESBYDATABASECONNECTION);
+Inputs[CREATECUBESBYDATABASECONNECTION] =   (b != null) ? b.toString() : "false";
+b = lIntellCubeResultSet.getFieldValue(DisplayPropertyEnum.LOADCUBESONSTARTUP);
+Inputs[LOADCUBESONSTARTUP] =   (b != null) ? b.toString() : "false";
+b = lIntellCubeResultSet.getFieldValue(DisplayPropertyEnum.LOADCUBESONPUBLICATION);
+Inputs[LOADCUBESONPUBLICATION] =   (b != null) ? b.toString() : "false";
+Inputs[INTELLIGENTCUBEMAXNO] =  lIntellCubeResultSet.getFieldValueString(DisplayPropertyEnum.INTELLIGENT_CUBE_MAX_NO);	
+Inputs[INTELLIGENTCUBEMAXRAM] =  lIntellCubeResultSet.getFieldValueString(DisplayPropertyEnum.INTELLIGENT_CUBE_MAX_RAM);
+Inputs[INTELLIGENTCUBEFILEDIR] =   lIntellCubeResultSet.getFieldValueString(DisplayPropertyEnum.INTELLIGENT_CUBE_FILE_DIR);	
+
+//Security Filter
+ResultSet lSecurityFilterResultSet =  (ResultSet)lResultSetP.getFieldValue(DisplayPropertyEnum.SECURITY_FILTER_RESULT_SET);
+lSecurityFilterResultSet.moveFirst();
+Inputs[SECURITYFILTERMERGER] =  lSecurityFilterResultSet.getFieldValueString(DisplayPropertyEnum.SECURITYFILTERMERGER);
+
+//Report Definition
+ResultSet lReportDefResultSet =  (ResultSet)lResultSetP.getFieldValue(DisplayPropertyEnum.REPORT_DEFINITION_RESULT_SET);
+lReportDefResultSet.moveFirst();
+
+ResultSet lSQLGenerationReportDefResultSet =  (ResultSet)lReportDefResultSet.getFieldValue(DisplayPropertyEnum.SQL_GENERATION_RESULT_SET);
+lSQLGenerationReportDefResultSet.moveFirst();
+//SQL Generation
+b = lSQLGenerationReportDefResultSet.getFieldValue(DisplayPropertyEnum.ATTRSHOWNUMERIC);
+Inputs[ATTRSHOWNUMERIC] =   (b != null) ? b.toString() : "false";
+b = lSQLGenerationReportDefResultSet.getFieldValue(DisplayPropertyEnum.ATTRSHOWCHARACTER);
+Inputs[ATTRSHOWCHARACTER] =   (b != null) ? b.toString() : "false";
+b = lSQLGenerationReportDefResultSet.getFieldValue(DisplayPropertyEnum.ATTRSHOWBINARY);
+Inputs[ATTRSHOWBINARY] =   (b != null) ? b.toString() : "false";
+b = lSQLGenerationReportDefResultSet.getFieldValue(DisplayPropertyEnum.ATTRSHOWDATE);
+Inputs[ATTRSHOWDATE] =   (b != null) ? b.toString() : "false";
+b = lSQLGenerationReportDefResultSet.getFieldValue(DisplayPropertyEnum.ATTRSHOWBIGDECIMAL);
+Inputs[ATTRSHOWBIGDECIMAL] =   (b != null) ? b.toString() : "false";
+b = lSQLGenerationReportDefResultSet.getFieldValue(DisplayPropertyEnum.ATTRREPLACEUNDERSCORE);
+Inputs[ATTRREPLACEUNDERSCORE] =   (b != null) ? b.toString() : "false";
+b = lSQLGenerationReportDefResultSet.getFieldValue(DisplayPropertyEnum.ATTRREMOVEID);
+Inputs[ATTRREMOVEID] =   (b != null) ? b.toString() : "false";
+b = lSQLGenerationReportDefResultSet.getFieldValue(DisplayPropertyEnum.ATTRFIRSTLETTERUPPERCASE);
+Inputs[ATTRFIRSTLETTERUPPERCASE] =   (b != null) ? b.toString() : "false";
+Inputs[ATTRIDSTRING] =  lSQLGenerationReportDefResultSet.getFieldValueString(DisplayPropertyEnum.ATTRIDSTRING);
+Inputs[ATTRDESCSTRING] =  lSQLGenerationReportDefResultSet.getFieldValueString(DisplayPropertyEnum.ATTRDESCSTRING);
+Inputs[ATTRLOOKUPSTRING] =  lSQLGenerationReportDefResultSet.getFieldValueString(DisplayPropertyEnum.ATTRLOOKUPSTRING);
+b = lSQLGenerationReportDefResultSet.getFieldValue(DisplayPropertyEnum.FACTSHOWNUMERIC);
+Inputs[FACTSHOWNUMERIC] =   (b != null) ? b.toString() : "false";
+b = lSQLGenerationReportDefResultSet.getFieldValue(DisplayPropertyEnum.FACTSHOWCHARACTER);
+Inputs[FACTSHOWCHARACTER] =   (b != null) ? b.toString() : "false";
+b = lSQLGenerationReportDefResultSet.getFieldValue(DisplayPropertyEnum.FACTSHOWBINARY);
+Inputs[FACTSHOWBINARY] =   (b != null) ? b.toString() : "false";
+b = lSQLGenerationReportDefResultSet.getFieldValue(DisplayPropertyEnum.FACTSHOWDATE);
+Inputs[FACTSHOWDATE] =   (b != null) ? b.toString() : "false";
+b = lSQLGenerationReportDefResultSet.getFieldValue(DisplayPropertyEnum.FACTSHOWBIGDECIMAL);
+Inputs[FACTSHOWBIGDECIMAL] =   (b != null) ? b.toString() : "false";
+b = lSQLGenerationReportDefResultSet.getFieldValue(DisplayPropertyEnum.FACTREPLACEUNDERSCORE);
+Inputs[FACTREPLACEUNDERSCORE] =   (b != null) ? b.toString() : "false";
+b = lSQLGenerationReportDefResultSet.getFieldValue(DisplayPropertyEnum.FACTFIRSTLETTERUPPERCASE);
+Inputs[FACTFIRSTLETTERUPPERCASE] =   (b != null) ? b.toString() : "false";
+b = lSQLGenerationReportDefResultSet.getFieldValue(DisplayPropertyEnum.VERIFYCUSTOMCOLUMNNAME);
+Inputs[VERIFYCUSTOMCOLUMNNAME] =   (b != null) ? b.toString() : "false";
+
+//NULL value
+ResultSet lNullValueReportDefResultSet =  (ResultSet)lReportDefResultSet.getFieldValue(DisplayPropertyEnum.NULL_VALUES_RESULT_SET);
+lNullValueReportDefResultSet.moveFirst();
+
+Inputs[NULLDISPLAYWAREHOUSE] =  lNullValueReportDefResultSet.getFieldValueString(DisplayPropertyEnum.NULLDISPLAYWAREHOUSE);
+Inputs[NULLDISPLAYCROSSTABULATOR] =  lNullValueReportDefResultSet.getFieldValueString(DisplayPropertyEnum.NULLDISPLAYCROSSTABULATOR);
+b = lNullValueReportDefResultSet.getFieldValue(DisplayPropertyEnum.REPLACENULLWHENSORTED);
+Inputs[REPLACENULLWHENSORTED] =   (b != null) ? b.toString() : "false";
+Inputs[REPLACENULLWHENSORTEDVALUE] =  lNullValueReportDefResultSet.getFieldValueString(DisplayPropertyEnum.REPLACENULLWHENSORTEDVALUE);
+Inputs[NOTCALCULATEDDISPLAY] =  lNullValueReportDefResultSet.getFieldValueString(DisplayPropertyEnum.NOTCALCULATEDDISPLAY);
+Inputs[MISSINGDISPLAY] =  lNullValueReportDefResultSet.getFieldValueString(DisplayPropertyEnum.MISSINGDISPLAY);
+
+//Graph value
+ResultSet lGraphReportDefResultSet =  (ResultSet)lReportDefResultSet.getFieldValue(DisplayPropertyEnum.GRAPH_RESULT_SET);
+lGraphReportDefResultSet.moveFirst();
+
+b = lGraphReportDefResultSet.getFieldValue(DisplayPropertyEnum.OVERRIDEGRAPHTEMPLATEFONT);
+Inputs[OVERRIDEGRAPHTEMPLATEFONT] =   (b != null) ? b.toString() : "false";
+Inputs[CHARACTERSET] =  lGraphReportDefResultSet.getFieldValueString(DisplayPropertyEnum.CHARACTERSET);
+Inputs[FONT] =  lGraphReportDefResultSet.getFieldValueString(DisplayPropertyEnum.FONT);
+
+
+b = lGraphReportDefResultSet.getFieldValue(DisplayPropertyEnum.USEZEROFORGRAPHNULL);
+Inputs[USEZEROFORGRAPHNULL] =   (b != null) ? b.toString() : "false";
+Inputs[GRAPHROUNDEDEFFECT] =  lGraphReportDefResultSet.getFieldValueString(DisplayPropertyEnum.GRAPHROUNDEDEFFECT);
+
+//Advanced
+ResultSet lAdvacnedReportDefResultSet =  (ResultSet)lReportDefResultSet.getFieldValue(DisplayPropertyEnum.ADVANCE_RESULT_SET);
+lAdvacnedReportDefResultSet.moveFirst();
+
+Inputs[EMPTYREPORTMESSAGE] =  lAdvacnedReportDefResultSet.getFieldValueString(DisplayPropertyEnum.EMPTYREPORTMESSAGE);
+b = lAdvacnedReportDefResultSet.getFieldValue(DisplayPropertyEnum.DISPLAYEMPTYMESSAGEINDOCUMENT);
+Inputs[DISPLAYEMPTYMESSAGEINDOCUMENT] =   (b != null) ? b.toString() : "false";
+b = lAdvacnedReportDefResultSet.getFieldValue(DisplayPropertyEnum.KEEPPAGEBYWHENSAVING);
+Inputs[KEEPPAGEBYWHENSAVING] =   (b != null) ? b.toString() : "false";
+Inputs[OVERWRITEWITHOLAPREPORTS] =  lAdvacnedReportDefResultSet.getFieldValueString(DisplayPropertyEnum.OVERWRITEWITHOLAPREPORTS).replaceAll(" ", "");
+b = lAdvacnedReportDefResultSet.getFieldValue(DisplayPropertyEnum.MOVESORTKEYSWITHPIVOT);
+Inputs[MOVESORTKEYSWITHPIVOT] =   (b != null) ? b.toString() : "false";
+
+//Delivery
+ResultSet lDeliveryResultSet =  (ResultSet)lResultSetP.getFieldValue(DisplayPropertyEnum.DELIVERIES_RESULT_SET);
+lDeliveryResultSet.moveFirst();
+
+b = lDeliveryResultSet.getFieldValue(DisplayPropertyEnum.APPENDEMAILFOOTER);
+Inputs[APPENDEMAILFOOTER] =   (b != null) ? b.toString() : "false";
+Inputs[EMAILFOOTERTEXT] =  lDeliveryResultSet.getFieldValueString(DisplayPropertyEnum.EMAILFOOTERTEXT);
+b = lDeliveryResultSet.getFieldValue(DisplayPropertyEnum.ENABLEPRINTINGRANGE);
+Inputs[ENABLEPRINTINGRANGE] =   (b != null) ? b.toString() : "false";
+b = lDeliveryResultSet.getFieldValue(DisplayPropertyEnum.DELIVERSUBSCRIPTIONWITHNODATA);
+Inputs[DELIVERSUBSCRIPTIONWITHNODATA] =   (b != null) ? b.toString() : "false";
+b = lDeliveryResultSet.getFieldValue(DisplayPropertyEnum.DELIVERSUBSCRIPTIONWITHPARTIALRESULTS);
+Inputs[DELIVERSUBSCRIPTIONWITHPARTIALRESULTS] =   (b != null) ? b.toString() : "false";	
+
+//New Properties
+Inputs[MAXEMAILSUBSCRIPTIONS] =  lGoverningResultSet.getFieldValueString(DisplayPropertyEnum.MAXEMAILSUBSCRIPTIONS);
+Inputs[MAXFILESIZEIMPORT] =  lGoverningResultSet.getFieldValueString(DisplayPropertyEnum.MAX_FILE_SIZE_IMPORT);
+Inputs[MAXFILESUBSCRIPTIONS] =  lGoverningResultSet.getFieldValueString(DisplayPropertyEnum.MAXFILESUBSCRIPTIONS);
+Inputs[MAXHISTLISTSUBSCRIPTIONS] =  lGoverningResultSet.getFieldValueString(DisplayPropertyEnum.MAXHISTLISTSUBSCRIPTIONS);
+Inputs[MAXINTERACTIVESESSIONSPERUSER] =  lGoverningResultSet.getFieldValueString(DisplayPropertyEnum.MAX_INTERACTIVE_SESSIONS_PER_USER);
+Inputs[MAXMOBILESUBSCRIPTIONS] =  lGoverningResultSet.getFieldValueString(DisplayPropertyEnum.MAXMOBILESUBSCRIPTIONS);
+Inputs[MAXNODATAMARTRESULTROWS] =  lGoverningResultSet.getFieldValueString(DisplayPropertyEnum.MAX_NO_DATA_MART_RESULTS_ROW);
+Inputs[MAXNOINTELLIGENTCUBERESULTROWS] =  lGoverningResultSet.getFieldValueString(DisplayPropertyEnum. MAX_NO_INTELLIGENT_CUBE_RESULT_ROW);
+Inputs[MAXPRINTSUBSCRIPTIONS] =  lGoverningResultSet.getFieldValueString(DisplayPropertyEnum.MAXPRINTSUBSCRIPTIONS);
+Inputs[MAXQUOTAIMPORT] =  lGoverningResultSet.getFieldValueString(DisplayPropertyEnum.MAX_QUOTA_IMPORT);
+Inputs[MAXSCHEDULEREPORTEXECTIME] =  lGoverningResultSet.getFieldValueString(DisplayPropertyEnum.MAXSCHEDULEREPORTEXECTIME);
+Inputs[SQLGENERATIONMEMORY] =  lGoverningResultSet.getFieldValueString(DisplayPropertyEnum.SQLGENERATIONMEMORY);
+Inputs[WAITTIMEFORPROMPTANSWERS] =  lGoverningResultSet.getFieldValueString(DisplayPropertyEnum.WAITTIMEFORPROMPTANSWERS);
+Inputs[WAREHOUSEEXECUTIONTIME] =  lGoverningResultSet.getFieldValueString(DisplayPropertyEnum.WAREHOUSEEXECUTIONTIME);			
+
+//ObjecTemplate
+ResultSet lObjectTemplateResultSet = (ResultSet)lResultSetP.getFieldValue(DisplayPropertyEnum.OBJECT_TEMPLATE_RESULT_SET);
+lObjectTemplateResultSet.moveFirst();
+
+Inputs[REPORTTPL] = lObjectTemplateResultSet.getFieldValueString(DisplayPropertyEnum.REPORTTPL);
+b = lObjectTemplateResultSet.getFieldValue(DisplayPropertyEnum.REPORTSHOWEMPTYTPL); 
+Inputs[REPORTSHOWEMPTYTPL] = b.toString();
+Inputs[TEMPLATETPL] = lObjectTemplateResultSet.getFieldValueString(DisplayPropertyEnum.TEMPLATETPL);
+b = lObjectTemplateResultSet.getFieldValue(DisplayPropertyEnum.TEMPLATESHOWEMPTYTPL);
+Inputs[TEMPLATESHOWEMPTYTPL] = b.toString();
+Inputs[METRICTPL] = lObjectTemplateResultSet.getFieldValueString(DisplayPropertyEnum.METRICTPL);
+b = lObjectTemplateResultSet.getFieldValue(DisplayPropertyEnum.METRICSHOWEMPTYTPL);
+Inputs[METRICSHOWEMPTYTPL] = b.toString();
+Inputs[DOCUMENTTPL] = lObjectTemplateResultSet.getFieldValueString(DisplayPropertyEnum.DOCUMENTTPL);
+
+/*b = lObjectTemplateResultSet.getFieldValue(DisplayPropertyEnum.DOCUMENTSHOWEMPTYTPL);
+Inputs[DOCUMENTSHOWEMPTYTPL] = b.toString();
+b = lObjectTemplateResultSet.getFieldValue(DisplayPropertyEnum.USEDOCWIZARD);
+Inputs[USEDOCWIZARD] = b.toString();*/
+b = lObjectTemplateResultSet.getFieldValue(DisplayPropertyEnum.DOCUMENTSHOWEMPTYTPL);
+Inputs[DOCUMENTSHOWEMPTYTPL] =   (b != null) ? b.toString() : "false";
+b = lObjectTemplateResultSet.getFieldValue(DisplayPropertyEnum.USEDOCWIZARD);
+Inputs[USEDOCWIZARD] =   (b != null) ? b.toString() : "false";
+
+FileOutputStream oFStream = null;
+PrintStream oOutStream = null;
+try{
+	oFStream = new FileOutputStream (scriptFile + projectName + ".txt");
+	oOutStream = new PrintStream (oFStream);
+
+	//now construct the statement
+	String lStatement = "ALTER PROJECT CONFIGURATION";
+
+	if (Inputs[DESCRIPTION]!=null){
+		lStatement = lStatement.concat(KeyWords[DESCRIPTION]);
+		lStatement = lStatement.concat("\"");
+		lStatement = lStatement.concat(Inputs[DESCRIPTION]);
+		lStatement = lStatement.concat("\"");
+	}
+
+	if (Inputs[WAREHOUSE]!=null &amp;&amp;!Inputs[WAREHOUSE].equals("")){
+		lStatement = lStatement.concat(KeyWords[WAREHOUSE]);
+		lStatement = lStatement.concat("\"");
+		lStatement = lStatement.concat(Inputs[WAREHOUSE]);
+		lStatement = lStatement.concat("\"");
+	}
+
+	/*if (Inputs[STATUS]!=null &amp;&amp;!Inputs[WAREHOUSE].equals("")){
+		lStatement = lStatement.concat(KeyWords[STATUS]);
+		lStatement = lStatement.concat("\"");
+		lStatement = lStatement.concat(Inputs[STATUS]);
+		lStatement = lStatement.concat("\"");
+	}*/
+
+	lStatement = lStatement.concat(KeyWords[SHOW_STATUS]);
+	lStatement = lStatement.concat(Inputs[SHOW_STATUS]);
+
+	lStatement = lStatement.concat(KeyWords[STATUSONTOP]);
+	lStatement = lStatement.concat(Inputs[STATUSONTOP]);
+
+	if (Inputs[DOCDIRECTORY]!=null &amp;&amp;!Inputs[DOCDIRECTORY].equals("")){
+		lStatement = lStatement.concat(KeyWords[DOCDIRECTORY]);
+		lStatement = lStatement.concat("\"");
+		lStatement = lStatement.concat(Inputs[DOCDIRECTORY]);
+		lStatement = lStatement.concat("\"");
+	}
+
+	if (Inputs[MAXNOATTRELEMS]!=null &amp;&amp;!Inputs[MAXNOATTRELEMS].equals("")){
+		lStatement = lStatement.concat(KeyWords[MAXNOATTRELEMS]);
+		lStatement = lStatement.concat(Inputs[MAXNOATTRELEMS]);
+	}
+
+	lStatement = lStatement.concat(KeyWords[USEWHLOGINEXEC]);
+	lStatement = lStatement.concat(Inputs[USEWHLOGINEXEC]);
+
+	lStatement = lStatement.concat(KeyWords[ENABLEOBJECTDELETION]);
+	lStatement = lStatement.concat(Inputs[ENABLEOBJECTDELETION]);
+
+	lStatement = lStatement.concat(KeyWords[MAXREPORTEXECTIME]);
+	lStatement = lStatement.concat(Inputs[MAXREPORTEXECTIME]);
+
+	lStatement = lStatement.concat(KeyWords[MAXNOREPORTRESULTROWS]);
+	lStatement = lStatement.concat(Inputs[MAXNOREPORTRESULTROWS]);
+
+
+	lStatement = lStatement.concat(KeyWords[MAXNOELEMROWS]);
+	lStatement = lStatement.concat(Inputs[MAXNOELEMROWS]);
+
+	lStatement = lStatement.concat(KeyWords[MAXNOINTRESULTROWS]);
+	lStatement = lStatement.concat(Inputs[MAXNOINTRESULTROWS]);
+
+	lStatement = lStatement.concat(KeyWords[MAXJOBSUSERACCT]);
+	lStatement = lStatement.concat(Inputs[MAXJOBSUSERACCT]);
+
+	lStatement = lStatement.concat(KeyWords[MAXJOBSUSERSESSION]);
+	lStatement = lStatement.concat(Inputs[MAXJOBSUSERSESSION]);
+
+	lStatement = lStatement.concat(KeyWords[MAXEXECJOBSUSER]);
+	lStatement = lStatement.concat(Inputs[MAXEXECJOBSUSER]);
+
+	lStatement = lStatement.concat(KeyWords[MAXJOBSPROJECT]);
+	lStatement = lStatement.concat(Inputs[MAXJOBSPROJECT]);
+
+	lStatement = lStatement.concat(KeyWords[MAXUSERSESSIONSPROJECT]);
+	lStatement = lStatement.concat(Inputs[MAXUSERSESSIONSPROJECT]);
+
+	if (Inputs[PROJDRILLMAP]!=null &amp;&amp;!Inputs[PROJDRILLMAP].equals("")){
+		lStatement = lStatement.concat(KeyWords[PROJDRILLMAP]);
+		lStatement = lStatement.concat("\"");
+		lStatement = lStatement.concat(Inputs[PROJDRILLMAP]);
+		lStatement = lStatement.concat("\"");
+	}
+
+	if (Inputs[PROJDRILLMAP].equals("")){
+		lStatement = lStatement.concat(KeyWords[PROJDRILLMAP]);
+		lStatement = lStatement.concat("\"");
+		lStatement = lStatement.concat(Inputs[PROJDRILLMAP]);
+		lStatement = lStatement.concat("\"");
+	}
+
+	if (Inputs[REPORTTPL]!=null &amp;&amp;!Inputs[REPORTTPL].equals("")){
+		lStatement = lStatement.concat(KeyWords[REPORTTPL]);
+		lStatement = lStatement.concat("\"");
+		lStatement = lStatement.concat(Inputs[REPORTTPL]);
+		lStatement = lStatement.concat("\"");
+	}
+
+	lStatement = lStatement.concat(KeyWords[REPORTSHOWEMPTYTPL]);
+	lStatement = lStatement.concat(Inputs[REPORTSHOWEMPTYTPL]);
+
+	if (Inputs[TEMPLATETPL]!=null &amp;&amp;!Inputs[TEMPLATETPL].equals("")){
+		lStatement = lStatement.concat(KeyWords[TEMPLATETPL]);
+		lStatement = lStatement.concat("\"");
+		lStatement = lStatement.concat(Inputs[TEMPLATETPL]);
+		lStatement = lStatement.concat("\"");
+	}
+
+	lStatement = lStatement.concat(KeyWords[TEMPLATESHOWEMPTYTPL]);
+	lStatement = lStatement.concat(Inputs[TEMPLATESHOWEMPTYTPL]);
+
+	if (Inputs[METRICTPL]!=null &amp;&amp;!Inputs[METRICTPL].equals("")){
+		lStatement = lStatement.concat(KeyWords[METRICTPL]);
+		lStatement = lStatement.concat("\"");
+		lStatement = lStatement.concat(Inputs[METRICTPL]);
+		lStatement = lStatement.concat("\"");
+	}
+
+	lStatement = lStatement.concat(KeyWords[METRICSHOWEMPTYTPL]);
+	lStatement = lStatement.concat(Inputs[METRICSHOWEMPTYTPL]);
+	
+	if (Inputs[CACHEENCRYPTION]!=null &amp;&amp;!Inputs[CACHEENCRYPTION].equals("")){
+		lStatement = lStatement.concat(KeyWords[CACHEENCRYPTION]);
+		lStatement = lStatement.concat(Inputs[CACHEENCRYPTION]);
+	}
+	
+	lStatement = lStatement.concat(KeyWords[DISABLEAUTOMATICEXPIRATIONDYNAMICDATES]);
+	lStatement = lStatement.concat(Inputs[DISABLEAUTOMATICEXPIRATIONDYNAMICDATES]);		
+	
+	lStatement = lStatement.concat(KeyWords[RERUNMOBILESUBSCRIPTIONS]);
+	lStatement = lStatement.concat(Inputs[RERUNMOBILESUBSCRIPTIONS]);
+	
+	lStatement = lStatement.concat(KeyWords[RERUNEMAILSUBSCRIPTIONS]);
+	lStatement = lStatement.concat(Inputs[RERUNEMAILSUBSCRIPTIONS]);
+	
+	lStatement = lStatement.concat(KeyWords[DISABLECREATINGMATCHINGCACHES]);
+	lStatement = lStatement.concat(Inputs[DISABLECREATINGMATCHINGCACHES]);
+	
+	lStatement = lStatement.concat(KeyWords[KEEPDOCUMENTFORMANIPULATION]);
+	lStatement = lStatement.concat(Inputs[KEEPDOCUMENTFORMANIPULATION]);
+	
+	if (Inputs[PDFHEADERLEFT] != null ){ 
+	lStatement = lStatement.concat(KeyWords[PDFHEADERLEFT]);
+	lStatement = lStatement.concat("\"");
+	lStatement = lStatement.concat(Inputs[PDFHEADERLEFT]);
+	lStatement = lStatement.concat("\"");}
+	
+	if (Inputs[PDFHEADERCENTER] != null ){ 			
+	lStatement = lStatement.concat(KeyWords[PDFHEADERCENTER]);
+	lStatement = lStatement.concat("\"");
+	lStatement = lStatement.concat(Inputs[PDFHEADERCENTER]);
+	lStatement = lStatement.concat("\"");}
+	if (Inputs[PDFHEADERRIGHT] != null ){ 
+	lStatement = lStatement.concat(KeyWords[PDFHEADERRIGHT]);
+	lStatement = lStatement.concat("\"");
+	lStatement = lStatement.concat(Inputs[PDFHEADERRIGHT]);
+	lStatement = lStatement.concat("\"");}
+	if (Inputs[PDFFOOTERLEFT] != null ){ lStatement = lStatement.concat(KeyWords[PDFFOOTERLEFT]);
+	lStatement = lStatement.concat("\"");
+	lStatement = lStatement.concat(Inputs[PDFFOOTERLEFT]);
+	lStatement = lStatement.concat("\"");}
+	if (Inputs[PDFFOOTERCENTER] != null ){ lStatement = lStatement.concat(KeyWords[PDFFOOTERCENTER]);
+	lStatement = lStatement.concat("\"");
+	lStatement = lStatement.concat(Inputs[PDFFOOTERCENTER]);
+	lStatement = lStatement.concat("\"");}
+	if (Inputs[PDFFOOTERRIGHT] != null ){ lStatement = lStatement.concat(KeyWords[PDFFOOTERRIGHT]);
+	lStatement = lStatement.concat("\"");
+	lStatement = lStatement.concat(Inputs[PDFFOOTERRIGHT]);
+	lStatement = lStatement.concat("\"");}
+	if (Inputs[EXPORT_HEADER] != null ){ lStatement = lStatement.concat(KeyWords[EXPORT_HEADER]);
+	lStatement = lStatement.concat("\"");
+	lStatement = lStatement.concat(Inputs[EXPORT_HEADER]);
+	lStatement = lStatement.concat("\"");}
+	if (Inputs[EXPORT_FOOTER] != null ){ lStatement = lStatement.concat(KeyWords[EXPORT_FOOTER]);
+	lStatement = lStatement.concat("\"");
+	lStatement = lStatement.concat(Inputs[EXPORT_FOOTER]);
+	lStatement = lStatement.concat("\"");}
+	if (Inputs[EXPORTCOMPATIBILITYMODE] != null &amp;&amp; !Inputs[EXPORTCOMPATIBILITYMODE].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[EXPORTCOMPATIBILITYMODE]);
+		lStatement = lStatement.concat(Inputs[EXPORTCOMPATIBILITYMODE]);}
+	if (Inputs[MERGEHEADERS] != null &amp;&amp; !Inputs[MERGEHEADERS].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[MERGEHEADERS]);
+		lStatement = lStatement.concat(Inputs[MERGEHEADERS]);}
+	if (Inputs[EXPORTFLASHFORMAT] != null &amp;&amp; !Inputs[EXPORTFLASHFORMAT].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[EXPORTFLASHFORMAT]);
+		lStatement = lStatement.concat(Inputs[EXPORTFLASHFORMAT]);}
+	if (Inputs[CREATEUSERPROFILEATLOGIN] != null &amp;&amp; !Inputs[CREATEUSERPROFILEATLOGIN].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[CREATEUSERPROFILEATLOGIN]);
+		lStatement = lStatement.concat(Inputs[CREATEUSERPROFILEATLOGIN]);}
+	if (Inputs[REPORTDESCRIPTION] != null &amp;&amp; !Inputs[REPORTDESCRIPTION].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[REPORTDESCRIPTION]);
+		lStatement = lStatement.concat(Inputs[REPORTDESCRIPTION]);}
+	if (Inputs[PROMPTDETAILS] != null &amp;&amp; !Inputs[PROMPTDETAILS].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[PROMPTDETAILS]);
+		lStatement = lStatement.concat(Inputs[PROMPTDETAILS]);}
+	if (Inputs[FILTERDETAILS] != null &amp;&amp; !Inputs[FILTERDETAILS].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[FILTERDETAILS]);
+		lStatement = lStatement.concat(Inputs[FILTERDETAILS]);}
+	if (Inputs[TEMPLATEDETAILS] != null &amp;&amp; !Inputs[TEMPLATEDETAILS].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[TEMPLATEDETAILS]);
+		lStatement = lStatement.concat(Inputs[TEMPLATEDETAILS]);}
+	if (Inputs[INCLUDEPROMPTTITLE] != null &amp;&amp; !Inputs[INCLUDEPROMPTTITLE].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[INCLUDEPROMPTTITLE]);
+		lStatement = lStatement.concat(Inputs[INCLUDEPROMPTTITLE]);}			
+	if (Inputs[REPLACEUNANSWEREDPROMPT] != null &amp;&amp; !Inputs[REPLACEUNANSWEREDPROMPT].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[REPLACEUNANSWEREDPROMPT]);
+		lStatement = lStatement.concat(Inputs[REPLACEUNANSWEREDPROMPT]);}
+	if (Inputs[SHOWATTRIBUTENAMEINPROMPT] != null &amp;&amp; !Inputs[SHOWATTRIBUTENAMEINPROMPT].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[SHOWATTRIBUTENAMEINPROMPT]);
+		lStatement = lStatement.concat(Inputs[SHOWATTRIBUTENAMEINPROMPT]);}
+
+	if (Inputs[INCLUDEUNUSEDPROMPTS] != null &amp;&amp; !Inputs[INCLUDEUNUSEDPROMPTS].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[INCLUDEUNUSEDPROMPTS]);
+	lStatement = lStatement.concat(Inputs[INCLUDEUNUSEDPROMPTS]);}
+	if (Inputs[USEDELIMITERSINREPORTOBJECTS] != null &amp;&amp; !Inputs[USEDELIMITERSINREPORTOBJECTS].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[USEDELIMITERSINREPORTOBJECTS]);
+		lStatement = lStatement.concat(Inputs[USEDELIMITERSINREPORTOBJECTS]);}
+	if (Inputs[USEALIASESINFILTERSDETAILS] != null &amp;&amp; !Inputs[USEALIASESINFILTERSDETAILS].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[USEALIASESINFILTERSDETAILS]);
+		lStatement = lStatement.concat(Inputs[USEALIASESINFILTERSDETAILS]);}
+	if (Inputs[REPORTFILTER] != null &amp;&amp; !Inputs[REPORTFILTER].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[REPORTFILTER]);
+		lStatement = lStatement.concat(Inputs[REPORTFILTER]);}
+	if (Inputs[REPORTFILTERNAME] != null &amp;&amp; !Inputs[REPORTFILTERNAME].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[REPORTFILTERNAME]);
+		lStatement = lStatement.concat(Inputs[REPORTFILTERNAME]);}
+	if (Inputs[REPORTFILTERDESC] != null &amp;&amp; !Inputs[REPORTFILTERDESC].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[REPORTFILTERDESC]);
+		lStatement = lStatement.concat(Inputs[REPORTFILTERDESC]);}
+	if (Inputs[REPORTLIMITS] != null &amp;&amp; !Inputs[REPORTLIMITS].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[REPORTLIMITS]);
+		lStatement = lStatement.concat(Inputs[REPORTLIMITS]);}
+	if (Inputs[VIEWFILTER] != null &amp;&amp; !Inputs[VIEWFILTER].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[VIEWFILTER]);
+		lStatement = lStatement.concat(Inputs[VIEWFILTER]);}
+	if (Inputs[METRICQUALIFICATIONVIEWFILTER] != null &amp;&amp; !Inputs[METRICQUALIFICATIONVIEWFILTER].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[METRICQUALIFICATIONVIEWFILTER]);
+		lStatement = lStatement.concat(Inputs[METRICQUALIFICATIONVIEWFILTER]);}
+	if (Inputs[DRILLFILTER] != null &amp;&amp; !Inputs[DRILLFILTER].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[DRILLFILTER]);
+		lStatement = lStatement.concat(Inputs[DRILLFILTER]);}
+	if (Inputs[SECURITYFILTER] != null &amp;&amp; !Inputs[SECURITYFILTER].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[SECURITYFILTER]);
+		lStatement = lStatement.concat(Inputs[SECURITYFILTER]);}
+	if (Inputs[INCLUDEFILTERTYPE] != null &amp;&amp; !Inputs[INCLUDEFILTERTYPE].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[INCLUDEFILTERTYPE]);
+		lStatement = lStatement.concat(Inputs[INCLUDEFILTERTYPE]);}
+	if (Inputs[SHOWEMPTYEXPRESSION] != null &amp;&amp; !Inputs[SHOWEMPTYEXPRESSION].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[SHOWEMPTYEXPRESSION]);
+		lStatement = lStatement.concat(Inputs[SHOWEMPTYEXPRESSION]);}
+	if (Inputs[NEWLINEAFTERTYPENAME] != null &amp;&amp; !Inputs[NEWLINEAFTERTYPENAME].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[NEWLINEAFTERTYPENAME]);
+		lStatement = lStatement.concat(Inputs[NEWLINEAFTERTYPENAME]);}
+	if (Inputs[NEWLINEBETWEENFILTER] != null &amp;&amp; !Inputs[NEWLINEBETWEENFILTER].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[NEWLINEBETWEENFILTER]);
+		lStatement = lStatement.concat(Inputs[NEWLINEBETWEENFILTER]);}
+	if (Inputs[SHOWREPORTLIMITS] != null &amp;&amp; !Inputs[SHOWREPORTLIMITS].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[SHOWREPORTLIMITS]);
+		lStatement = lStatement.concat(Inputs[SHOWREPORTLIMITS]);}
+	if (Inputs[EXPANDSHORCUTFILTERS] != null &amp;&amp; !Inputs[EXPANDSHORCUTFILTERS].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[EXPANDSHORCUTFILTERS]);
+		lStatement = lStatement.concat(Inputs[EXPANDSHORCUTFILTERS]);}
+	if (Inputs[SHOWATTRIBUTEINLISTCONDITIONS] != null &amp;&amp; !Inputs[SHOWATTRIBUTEINLISTCONDITIONS].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[SHOWATTRIBUTEINLISTCONDITIONS]);
+		lStatement = lStatement.concat(Inputs[SHOWATTRIBUTEINLISTCONDITIONS]);}
+	if (Inputs[SEPARATORAFTERATTRNAME] != null ){ 
+		lStatement = lStatement.concat(KeyWords[SEPARATORAFTERATTRNAME]);
+		lStatement = lStatement.concat("\"");
+		lStatement = lStatement.concat(Inputs[SEPARATORAFTERATTRNAME]);
+		lStatement = lStatement.concat("\"");}
+	if (Inputs[NEWLINEAFTERATTRNAME] != null &amp;&amp; !Inputs[NEWLINEAFTERATTRNAME].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[NEWLINEAFTERATTRNAME]);
+		lStatement = lStatement.concat(Inputs[NEWLINEAFTERATTRNAME]);}
+	if (Inputs[SEPARATORBETWEENLASTTWOELEMENTS] != null &amp;&amp; !Inputs[SEPARATORBETWEENLASTTWOELEMENTS].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[SEPARATORBETWEENLASTTWOELEMENTS]);
+		lStatement = lStatement.concat(Inputs[SEPARATORBETWEENLASTTWOELEMENTS]);
+		if (Inputs[SEPARATORBETWEENLASTTWOELEMENTS].equalsIgnoreCase("Custom"))
+			{
+			    	String customSeparator = lDetailDocAndRepResultSet.getFieldValueString(DisplayPropertyEnum.SEPARATORBETWEENLASTTWOELEMENTSCUSTOM);
+			    	lStatement = lStatement.concat(" ");
+			    	lStatement = lStatement.concat("\"");
+			    	lStatement = lStatement.concat(customSeparator);
+			    	lStatement = lStatement.concat("\"");
+			}
+		}
+	if (Inputs[NEWLINEBETWEENELEMENTS] != null &amp;&amp; !Inputs[NEWLINEBETWEENELEMENTS].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[NEWLINEBETWEENELEMENTS]);
+		lStatement = lStatement.concat(Inputs[NEWLINEBETWEENELEMENTS]);}
+	if (Inputs[TRIMELEMENTS] != null &amp;&amp; !Inputs[TRIMELEMENTS].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[TRIMELEMENTS]);
+		lStatement = lStatement.concat(Inputs[TRIMELEMENTS]);}
+	if (Inputs[DISPLAYOPERATORS] != null &amp;&amp; !Inputs[DISPLAYOPERATORS].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[DISPLAYOPERATORS]);
+		lStatement = lStatement.concat(Inputs[DISPLAYOPERATORS]);}
+	if (Inputs[INCLUDEATTRFORMINCONDITION] != null &amp;&amp; !Inputs[INCLUDEATTRFORMINCONDITION].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[INCLUDEATTRFORMINCONDITION]);
+		lStatement = lStatement.concat(Inputs[INCLUDEATTRFORMINCONDITION]);}
+	if (Inputs[DYNAMICDATE] != null &amp;&amp; !Inputs[DYNAMICDATE].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[DYNAMICDATE]);
+		lStatement = lStatement.concat(Inputs[DYNAMICDATE]);}
+	if (Inputs[NEWLINEBETWEENCONDITIONS] != null &amp;&amp; !Inputs[NEWLINEBETWEENCONDITIONS].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[NEWLINEBETWEENCONDITIONS]);
+		lStatement = lStatement.concat(Inputs[NEWLINEBETWEENCONDITIONS]);}
+	if (Inputs[LINESPACING] != null &amp;&amp; !Inputs[LINESPACING].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[LINESPACING]);
+		lStatement = lStatement.concat(Inputs[LINESPACING]);}
+	if (Inputs[PARENTHESESAROUNDCONDITIONS] != null &amp;&amp; !Inputs[PARENTHESESAROUNDCONDITIONS].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[PARENTHESESAROUNDCONDITIONS]);
+		lStatement = lStatement.concat(Inputs[PARENTHESESAROUNDCONDITIONS]);}
+	if (Inputs[LOGICALOPBETWEENCONDITIONS] != null &amp;&amp; !Inputs[LOGICALOPBETWEENCONDITIONS].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[LOGICALOPBETWEENCONDITIONS]);
+		lStatement = lStatement.concat(Inputs[LOGICALOPBETWEENCONDITIONS]);}
+	if (Inputs[UNITSFROM] != null &amp;&amp; !Inputs[UNITSFROM].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[UNITSFROM]);
+		lStatement = lStatement.concat(Inputs[UNITSFROM]);}
+	if (Inputs[BASETEMPLATE] != null &amp;&amp; !Inputs[BASETEMPLATE].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[BASETEMPLATE]);
+		lStatement = lStatement.concat(Inputs[BASETEMPLATE]);}
+	if (Inputs[TEMPLATEDESCRIPTION] != null &amp;&amp; !Inputs[TEMPLATEDESCRIPTION].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[TEMPLATEDESCRIPTION]);
+		lStatement = lStatement.concat(Inputs[TEMPLATEDESCRIPTION]);}
+	if (Inputs[NONMETRICTEMPLATEUNITS] != null &amp;&amp; !Inputs[NONMETRICTEMPLATEUNITS].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[NONMETRICTEMPLATEUNITS]);
+		lStatement = lStatement.concat(Inputs[NONMETRICTEMPLATEUNITS]);}
+	if (Inputs[METRICS] != null &amp;&amp; !Inputs[METRICS].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[METRICS]);
+		lStatement = lStatement.concat(Inputs[METRICS]);}
+	if (Inputs[ONLYCONDITIONAL] != null &amp;&amp; !Inputs[ONLYCONDITIONAL].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[ONLYCONDITIONAL]);
+		lStatement = lStatement.concat(Inputs[ONLYCONDITIONAL]);}
+	if (Inputs[FORMULA] != null &amp;&amp; !Inputs[FORMULA].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[FORMULA]);
+		lStatement = lStatement.concat(Inputs[FORMULA]);}
+	if (Inputs[DIMENSIONALITY] != null &amp;&amp; !Inputs[DIMENSIONALITY].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[DIMENSIONALITY]);
+		lStatement = lStatement.concat(Inputs[DIMENSIONALITY]);}
+	if (Inputs[CONDITIONALITY] != null &amp;&amp; !Inputs[CONDITIONALITY].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[CONDITIONALITY]);
+		lStatement = lStatement.concat(Inputs[CONDITIONALITY]);}
+	if (Inputs[TRANSFORMATION] != null &amp;&amp; !Inputs[TRANSFORMATION].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[TRANSFORMATION]);
+		lStatement = lStatement.concat(Inputs[TRANSFORMATION]);}
+	if (Inputs[ALLOWDOCUMENTOVERWRITEWATERMARK] != null &amp;&amp; !Inputs[ALLOWDOCUMENTOVERWRITEWATERMARK].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[ALLOWDOCUMENTOVERWRITEWATERMARK]);
+		lStatement = lStatement.concat(Inputs[ALLOWDOCUMENTOVERWRITEWATERMARK]);}
+	if (Inputs[WEBSERVERMACRO] != null ){ 
+		lStatement = lStatement.concat(KeyWords[WEBSERVERMACRO]);
+		lStatement = lStatement.concat("\"");
+		lStatement = lStatement.concat(Inputs[WEBSERVERMACRO]);
+		lStatement = lStatement.concat("\"");}
+	if (Inputs[ENABLELINKSINMHT] != null &amp;&amp; !Inputs[ENABLELINKSINMHT].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[ENABLELINKSINMHT]);
+		lStatement = lStatement.concat(Inputs[ENABLELINKSINMHT]);}
+
+	lCustomerStyleAdvanceResultSet.moveFirst();
+	boolean lFirstflag = true;
+	while (!lCustomerStyleAdvanceResultSet.isEof())
+	{
+		Inputs[CUSTOMPROMPSTYLES] =  lCustomerStyleAdvanceResultSet.getFieldValueString(DisplayPropertyEnum.CUSTOMPROMPTSTYLE_TYPE);
+		Inputs[CUSTOMPROMPSTYLESNAME] =  lCustomerStyleAdvanceResultSet.getFieldValueString(DisplayPropertyEnum.CUSTOMPROMPTSTYLE_NAME);
+		Inputs[CUSTOMPROMPSTYLESDESC] =  lCustomerStyleAdvanceResultSet.getFieldValueString(DisplayPropertyEnum.CUSTOMPROMPTSTYLE_DESCRIPTION);
+		Inputs[CUSTOMPROMPSTYLESBASESTYLE] =  lCustomerStyleAdvanceResultSet.getFieldValueString(DisplayPropertyEnum.CUSTOMPROMPTSTYLE_BASE_STYLE);
+		
+		if (Inputs[CUSTOMPROMPSTYLES] != null &amp;&amp; !Inputs[CUSTOMPROMPSTYLES].equals("")){
+			if (lFirstflag == true)
+			{
+				lStatement = lStatement.concat(KeyWords[CUSTOMPROMPSTYLES]);						
+			}										
+			//OBJECT_PROMPT}, {@link WebPromptCustomStyles#ELEMENT_PROMPT},
+			// * {@link WebPromptCustomStyles#AQ_PROMPT}, {@link WebPromptCustomStyles#MQ_PROMPT}, {@link WebPromptCustomStyles#HIERARCHICAL_PROMPT
+			if (Inputs[CUSTOMPROMPSTYLES].equalsIgnoreCase("Constant"))
+				lStatement = lStatement.concat("VALUEPROMPT");
+			else if (Inputs[CUSTOMPROMPSTYLES].equalsIgnoreCase("OBJECT"))
+				lStatement = lStatement.concat("OBJECTPROMPT");
+			else if (Inputs[CUSTOMPROMPSTYLES].equalsIgnoreCase("ELEMENT"))
+				lStatement = lStatement.concat("ELEMENTPROMPT");
+			else if (Inputs[CUSTOMPROMPSTYLES].equalsIgnoreCase("AQ"))
+				lStatement = lStatement.concat("ATTRIBUTEQUALPROMPT");
+			else if (Inputs[CUSTOMPROMPSTYLES].equalsIgnoreCase("MQ"))
+				lStatement = lStatement.concat("METRICQUALIFICATIONPROMPT");
+			else if (Inputs[CUSTOMPROMPSTYLES].equalsIgnoreCase("HIERARCHICAL"))
+				lStatement = lStatement.concat("HIERARCHYPROMPT");
+			else //Not valid type 
+			{
+				lFirstflag = false;
+				lCustomerStyleAdvanceResultSet.moveNext();
+				continue;
+			}
+		}
+		if (Inputs[CUSTOMPROMPSTYLESNAME] != null &amp;&amp; !Inputs[CUSTOMPROMPSTYLESNAME].equals("")){ 
+			lStatement = lStatement.concat(KeyWords[CUSTOMPROMPSTYLESNAME]);
+			lStatement = lStatement.concat("\"");
+			lStatement = lStatement.concat(Inputs[CUSTOMPROMPSTYLESNAME]);
+			lStatement = lStatement.concat("\"");}
+		if (Inputs[CUSTOMPROMPSTYLESDESC] != null){
+			lStatement = lStatement.concat(KeyWords[CUSTOMPROMPSTYLESDESC]);
+			lStatement = lStatement.concat("\"");
+			lStatement = lStatement.concat(Inputs[CUSTOMPROMPSTYLESDESC]);
+			lStatement = lStatement.concat("\"");}
+		if (Inputs[CUSTOMPROMPSTYLESBASESTYLE] != null &amp;&amp; !Inputs[CUSTOMPROMPSTYLESBASESTYLE].equals("")){ 
+			lStatement = lStatement.concat(KeyWords[CUSTOMPROMPSTYLESBASESTYLE]);
+			lStatement = lStatement.concat("\"");
+			lStatement = lStatement.concat(Inputs[CUSTOMPROMPSTYLESBASESTYLE]);
+			lStatement = lStatement.concat("\"");}	
+		lStatement = lStatement.concat(",");
+		lCustomerStyleAdvanceResultSet.moveNext();
+		lFirstflag = false;
+	}
+	if (lFirstflag == false)
+		lStatement = lStatement.substring(0 , lStatement.length()-1);
+	if (Inputs[DISPLAYATTRINALPHABETICALORDER] != null &amp;&amp; !Inputs[DISPLAYATTRINALPHABETICALORDER].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[DISPLAYATTRINALPHABETICALORDER]);
+		lStatement = lStatement.concat(Inputs[DISPLAYATTRINALPHABETICALORDER]);}
+	if (Inputs[ENABLEPERSONALANSWERS] != null &amp;&amp; !Inputs[ENABLEPERSONALANSWERS].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[ENABLEPERSONALANSWERS]);
+		lStatement = lStatement.concat(Inputs[ENABLEPERSONALANSWERS]);}
+	if (Inputs[EXPORTPDFINHEBREW] != null &amp;&amp; !Inputs[EXPORTPDFINHEBREW].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[EXPORTPDFINHEBREW]);
+		lStatement = lStatement.concat(Inputs[EXPORTPDFINHEBREW]);}
+	if (Inputs[DEFAULTDATAMART] != null ){ 
+		lStatement = lStatement.concat(KeyWords[DEFAULTDATAMART]);
+		lStatement = lStatement.concat("\"");
+		lStatement = lStatement.concat(Inputs[DEFAULTDATAMART]);
+		lStatement = lStatement.concat("\"");}
+	if (Inputs[CREATECUBESBYDATABASECONNECTION] != null &amp;&amp; !Inputs[CREATECUBESBYDATABASECONNECTION].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[CREATECUBESBYDATABASECONNECTION]);
+		lStatement = lStatement.concat(Inputs[CREATECUBESBYDATABASECONNECTION]);}
+	if (Inputs[LOADCUBESONSTARTUP] != null &amp;&amp; !Inputs[LOADCUBESONSTARTUP].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[LOADCUBESONSTARTUP]);
+		lStatement = lStatement.concat(Inputs[LOADCUBESONSTARTUP]);}
+	if (Inputs[LOADCUBESONPUBLICATION] != null &amp;&amp; !Inputs[LOADCUBESONPUBLICATION].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[LOADCUBESONPUBLICATION]);
+		lStatement = lStatement.concat(Inputs[LOADCUBESONPUBLICATION]);}
+	if (Inputs[SECURITYFILTERMERGER] != null &amp;&amp; !Inputs[SECURITYFILTERMERGER].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[SECURITYFILTERMERGER]);
+		lStatement = lStatement.concat(Inputs[SECURITYFILTERMERGER]);}
+	if (Inputs[ATTRSHOWNUMERIC] != null &amp;&amp; !Inputs[ATTRSHOWNUMERIC].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[ATTRSHOWNUMERIC]);
+		lStatement = lStatement.concat(Inputs[ATTRSHOWNUMERIC]);}
+	if (Inputs[ATTRSHOWCHARACTER] != null &amp;&amp; !Inputs[ATTRSHOWCHARACTER].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[ATTRSHOWCHARACTER]);
+		lStatement = lStatement.concat(Inputs[ATTRSHOWCHARACTER]);}
+	if (Inputs[ATTRSHOWBINARY] != null &amp;&amp; !Inputs[ATTRSHOWBINARY].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[ATTRSHOWBINARY]);
+		lStatement = lStatement.concat(Inputs[ATTRSHOWBINARY]);}
+	if (Inputs[ATTRSHOWDATE] != null &amp;&amp; !Inputs[ATTRSHOWDATE].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[ATTRSHOWDATE]);
+		lStatement = lStatement.concat(Inputs[ATTRSHOWDATE]);}
+	if (Inputs[ATTRSHOWBIGDECIMAL] != null &amp;&amp; !Inputs[ATTRSHOWBIGDECIMAL].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[ATTRSHOWBIGDECIMAL]);
+		lStatement = lStatement.concat(Inputs[ATTRSHOWBIGDECIMAL]);}
+	if (Inputs[ATTRREPLACEUNDERSCORE] != null &amp;&amp; !Inputs[ATTRREPLACEUNDERSCORE].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[ATTRREPLACEUNDERSCORE]);
+		lStatement = lStatement.concat(Inputs[ATTRREPLACEUNDERSCORE]);}
+	if (Inputs[ATTRREMOVEID] != null &amp;&amp; !Inputs[ATTRREMOVEID].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[ATTRREMOVEID]);
+		lStatement = lStatement.concat(Inputs[ATTRREMOVEID]);}
+	if (Inputs[ATTRFIRSTLETTERUPPERCASE] != null &amp;&amp; !Inputs[ATTRFIRSTLETTERUPPERCASE].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[ATTRFIRSTLETTERUPPERCASE]);
+		lStatement = lStatement.concat(Inputs[ATTRFIRSTLETTERUPPERCASE]);}
+	if (Inputs[ATTRIDSTRING] != null ){ 
+		lStatement = lStatement.concat(KeyWords[ATTRIDSTRING]);
+		lStatement = lStatement.concat("\"");
+		lStatement = lStatement.concat(Inputs[ATTRIDSTRING]);
+		lStatement = lStatement.concat("\"");}
+	if (Inputs[ATTRDESCSTRING] != null ){ 
+		lStatement = lStatement.concat(KeyWords[ATTRDESCSTRING]);
+		lStatement = lStatement.concat("\"");
+		lStatement = lStatement.concat(Inputs[ATTRDESCSTRING]);
+		lStatement = lStatement.concat("\"");}
+	if (Inputs[ATTRLOOKUPSTRING] != null ){ 
+		lStatement = lStatement.concat(KeyWords[ATTRLOOKUPSTRING]);
+		lStatement = lStatement.concat("\"");
+		lStatement = lStatement.concat(Inputs[ATTRLOOKUPSTRING]);
+		lStatement = lStatement.concat("\"");}
+	if (Inputs[FACTSHOWNUMERIC] != null &amp;&amp; !Inputs[FACTSHOWNUMERIC].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[FACTSHOWNUMERIC]);
+		lStatement = lStatement.concat(Inputs[FACTSHOWNUMERIC]);}
+	if (Inputs[FACTSHOWCHARACTER] != null &amp;&amp; !Inputs[FACTSHOWCHARACTER].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[FACTSHOWCHARACTER]);
+		lStatement = lStatement.concat(Inputs[FACTSHOWCHARACTER]);}
+	if (Inputs[FACTSHOWBINARY] != null &amp;&amp; !Inputs[FACTSHOWBINARY].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[FACTSHOWBINARY]);
+		lStatement = lStatement.concat(Inputs[FACTSHOWBINARY]);}
+	if (Inputs[FACTSHOWDATE] != null &amp;&amp; !Inputs[FACTSHOWDATE].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[FACTSHOWDATE]);
+		lStatement = lStatement.concat(Inputs[FACTSHOWDATE]);}
+	if (Inputs[FACTSHOWBIGDECIMAL] != null &amp;&amp; !Inputs[FACTSHOWBIGDECIMAL].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[FACTSHOWBIGDECIMAL]);
+		lStatement = lStatement.concat(Inputs[FACTSHOWBIGDECIMAL]);}
+	if (Inputs[FACTREPLACEUNDERSCORE] != null &amp;&amp; !Inputs[FACTREPLACEUNDERSCORE].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[FACTREPLACEUNDERSCORE]);
+		lStatement = lStatement.concat(Inputs[FACTREPLACEUNDERSCORE]);}
+	if (Inputs[FACTFIRSTLETTERUPPERCASE] != null &amp;&amp; !Inputs[FACTFIRSTLETTERUPPERCASE].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[FACTFIRSTLETTERUPPERCASE]);
+		lStatement = lStatement.concat(Inputs[FACTFIRSTLETTERUPPERCASE]);}
+	if (Inputs[VERIFYCUSTOMCOLUMNNAME] != null &amp;&amp; !Inputs[VERIFYCUSTOMCOLUMNNAME].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[VERIFYCUSTOMCOLUMNNAME]);
+		lStatement = lStatement.concat(Inputs[VERIFYCUSTOMCOLUMNNAME]);}
+	if (Inputs[NULLDISPLAYWAREHOUSE] != null ){ 
+		lStatement = lStatement.concat(KeyWords[NULLDISPLAYWAREHOUSE]);
+		lStatement = lStatement.concat("\"");
+		lStatement = lStatement.concat(Inputs[NULLDISPLAYWAREHOUSE]);
+		lStatement = lStatement.concat("\"");}
+	if (Inputs[NULLDISPLAYCROSSTABULATOR] != null ){ 
+		lStatement = lStatement.concat(KeyWords[NULLDISPLAYCROSSTABULATOR]);
+		lStatement = lStatement.concat("\"");
+		lStatement = lStatement.concat(Inputs[NULLDISPLAYCROSSTABULATOR]);
+		lStatement = lStatement.concat("\"");}
+	if (Inputs[REPLACENULLWHENSORTED] != null &amp;&amp; !Inputs[REPLACENULLWHENSORTED].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[REPLACENULLWHENSORTED]);
+		lStatement = lStatement.concat(Inputs[REPLACENULLWHENSORTED]);}
+	if (Inputs[REPLACENULLWHENSORTEDVALUE] != null &amp;&amp; !Inputs[REPLACENULLWHENSORTEDVALUE].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[REPLACENULLWHENSORTEDVALUE]);
+		lStatement = lStatement.concat(Inputs[REPLACENULLWHENSORTEDVALUE]);}
+	if (Inputs[NOTCALCULATEDDISPLAY] != null ){ 
+		lStatement = lStatement.concat(KeyWords[NOTCALCULATEDDISPLAY]);
+		lStatement = lStatement.concat("\"");
+		lStatement = lStatement.concat(Inputs[NOTCALCULATEDDISPLAY]);
+		lStatement = lStatement.concat("\"");}
+	if (Inputs[MISSINGDISPLAY] != null ){ 
+		lStatement = lStatement.concat(KeyWords[MISSINGDISPLAY]);
+		lStatement = lStatement.concat("\"");
+		lStatement = lStatement.concat(Inputs[MISSINGDISPLAY]);
+		lStatement = lStatement.concat("\"");}
+	if (Inputs[USEZEROFORGRAPHNULL] != null &amp;&amp; !Inputs[USEZEROFORGRAPHNULL].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[USEZEROFORGRAPHNULL]);
+		lStatement = lStatement.concat(Inputs[USEZEROFORGRAPHNULL]);}
+	if (Inputs[GRAPHROUNDEDEFFECT] != null &amp;&amp; !Inputs[GRAPHROUNDEDEFFECT].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[GRAPHROUNDEDEFFECT]);
+		lStatement = lStatement.concat(Inputs[GRAPHROUNDEDEFFECT]);}
+	if (Inputs[EMPTYREPORTMESSAGE] != null ){ 
+		lStatement = lStatement.concat(KeyWords[EMPTYREPORTMESSAGE]);
+		lStatement = lStatement.concat("\"");
+		lStatement = lStatement.concat(Inputs[EMPTYREPORTMESSAGE]);
+		lStatement = lStatement.concat("\"");}
+	if (Inputs[DISPLAYEMPTYMESSAGEINDOCUMENT] != null &amp;&amp; !Inputs[DISPLAYEMPTYMESSAGEINDOCUMENT].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[DISPLAYEMPTYMESSAGEINDOCUMENT]);
+		lStatement = lStatement.concat(Inputs[DISPLAYEMPTYMESSAGEINDOCUMENT]);}
+	if (Inputs[KEEPPAGEBYWHENSAVING] != null &amp;&amp; !Inputs[KEEPPAGEBYWHENSAVING].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[KEEPPAGEBYWHENSAVING]);
+		lStatement = lStatement.concat(Inputs[KEEPPAGEBYWHENSAVING]);}
+	if (Inputs[OVERWRITEWITHOLAPREPORTS] != null &amp;&amp; !Inputs[OVERWRITEWITHOLAPREPORTS].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[OVERWRITEWITHOLAPREPORTS]);
+		lStatement = lStatement.concat(Inputs[OVERWRITEWITHOLAPREPORTS]);}
+	if (Inputs[MOVESORTKEYSWITHPIVOT] != null &amp;&amp; !Inputs[MOVESORTKEYSWITHPIVOT].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[MOVESORTKEYSWITHPIVOT]);
+		lStatement = lStatement.concat(Inputs[MOVESORTKEYSWITHPIVOT]);}
+	if (Inputs[APPENDEMAILFOOTER] != null &amp;&amp; !Inputs[APPENDEMAILFOOTER].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[APPENDEMAILFOOTER]);
+		lStatement = lStatement.concat(Inputs[APPENDEMAILFOOTER]);}
+	if (Inputs[EMAILFOOTERTEXT] != null ){ 
+		lStatement = lStatement.concat(KeyWords[EMAILFOOTERTEXT]);
+		lStatement = lStatement.concat("\"");
+		lStatement = lStatement.concat(Inputs[EMAILFOOTERTEXT]);
+		lStatement = lStatement.concat("\"");}
+	if (Inputs[ENABLEPRINTINGRANGE] != null &amp;&amp; !Inputs[ENABLEPRINTINGRANGE].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[ENABLEPRINTINGRANGE]);
+		lStatement = lStatement.concat(Inputs[ENABLEPRINTINGRANGE]);}
+	if (Inputs[DELIVERSUBSCRIPTIONWITHNODATA] != null &amp;&amp; !Inputs[DELIVERSUBSCRIPTIONWITHNODATA].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[DELIVERSUBSCRIPTIONWITHNODATA]);
+		lStatement = lStatement.concat(Inputs[DELIVERSUBSCRIPTIONWITHNODATA]);}
+	if (Inputs[DELIVERSUBSCRIPTIONWITHPARTIALRESULTS] != null &amp;&amp; !Inputs[DELIVERSUBSCRIPTIONWITHPARTIALRESULTS].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[DELIVERSUBSCRIPTIONWITHPARTIALRESULTS]);
+		lStatement = lStatement.concat(Inputs[DELIVERSUBSCRIPTIONWITHPARTIALRESULTS]);}					
+	
+	if (Inputs[DRILLIMMEDIATE] != null &amp;&amp; !Inputs[DRILLIMMEDIATE].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[DRILLIMMEDIATE]);
+		lStatement = lStatement.concat(Inputs[DRILLIMMEDIATE]);}
+	if (Inputs[SORTDRILLPATHS] != null &amp;&amp; !Inputs[SORTDRILLPATHS].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[SORTDRILLPATHS]);
+		lStatement = lStatement.concat(Inputs[SORTDRILLPATHS]);}
+	if (Inputs[INTELLIGENTCUBEMAXNO] != null &amp;&amp; !Inputs[INTELLIGENTCUBEMAXNO].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[INTELLIGENTCUBEMAXNO]);
+		lStatement = lStatement.concat(Inputs[INTELLIGENTCUBEMAXNO]);}
+	if (Inputs[INTELLIGENTCUBEMAXRAM] != null &amp;&amp; !Inputs[INTELLIGENTCUBEMAXRAM].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[INTELLIGENTCUBEMAXRAM]);
+		lStatement = lStatement.concat(Inputs[INTELLIGENTCUBEMAXRAM]);}
+	if (Inputs[INTELLIGENTCUBEFILEDIR] != null ){ 
+		lStatement = lStatement.concat(KeyWords[INTELLIGENTCUBEFILEDIR]);
+		lStatement = lStatement.concat("\"");
+		lStatement = lStatement.concat(Inputs[INTELLIGENTCUBEFILEDIR]);
+		lStatement = lStatement.concat("\"");}			
+	if (Inputs[INTERACTIVEJOBPERPROJECT] != null &amp;&amp; !Inputs[INTERACTIVEJOBPERPROJECT].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[INTERACTIVEJOBPERPROJECT]);
+		lStatement = lStatement.concat(Inputs[INTERACTIVEJOBPERPROJECT]);}
+	if (Inputs[MAXCACHEUPDATESUBSCRIPTIONS] != null &amp;&amp; !Inputs[MAXCACHEUPDATESUBSCRIPTIONS].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[MAXCACHEUPDATESUBSCRIPTIONS]);
+		lStatement = lStatement.concat(Inputs[MAXCACHEUPDATESUBSCRIPTIONS]);}
+	if (Inputs[MAXEMAILSUBSCRIPTIONS] != null &amp;&amp; !Inputs[MAXEMAILSUBSCRIPTIONS].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[MAXEMAILSUBSCRIPTIONS]);
+		lStatement = lStatement.concat(Inputs[MAXEMAILSUBSCRIPTIONS]);}
+	if (Inputs[MAXFILESIZEIMPORT] != null &amp;&amp; !Inputs[MAXFILESIZEIMPORT].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[MAXFILESIZEIMPORT]);
+		lStatement = lStatement.concat(Inputs[MAXFILESIZEIMPORT]);}
+	if (Inputs[MAXFILESUBSCRIPTIONS] != null &amp;&amp; !Inputs[MAXFILESUBSCRIPTIONS].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[MAXFILESUBSCRIPTIONS]);
+		lStatement = lStatement.concat(Inputs[MAXFILESUBSCRIPTIONS]);}
+	if (Inputs[MAXHISTLISTSUBSCRIPTIONS] != null &amp;&amp; !Inputs[MAXHISTLISTSUBSCRIPTIONS].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[MAXHISTLISTSUBSCRIPTIONS]);
+		lStatement = lStatement.concat(Inputs[MAXHISTLISTSUBSCRIPTIONS]);}
+	if (Inputs[MAXINTERACTIVESESSIONSPERUSER] != null &amp;&amp; !Inputs[MAXINTERACTIVESESSIONSPERUSER].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[MAXINTERACTIVESESSIONSPERUSER]);
+		lStatement = lStatement.concat(Inputs[MAXINTERACTIVESESSIONSPERUSER]);}
+	if (Inputs[MAXMOBILESUBSCRIPTIONS] != null &amp;&amp; !Inputs[MAXMOBILESUBSCRIPTIONS].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[MAXMOBILESUBSCRIPTIONS]);
+		lStatement = lStatement.concat(Inputs[MAXMOBILESUBSCRIPTIONS]);}
+	if (Inputs[MAXNODATAMARTRESULTROWS] != null &amp;&amp; !Inputs[MAXNODATAMARTRESULTROWS].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[MAXNODATAMARTRESULTROWS]);
+		lStatement = lStatement.concat(Inputs[MAXNODATAMARTRESULTROWS]);}
+	if (Inputs[MAXNOINTELLIGENTCUBERESULTROWS] != null &amp;&amp; !Inputs[MAXNOINTELLIGENTCUBERESULTROWS].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[MAXNOINTELLIGENTCUBERESULTROWS]);
+		lStatement = lStatement.concat(Inputs[MAXNOINTELLIGENTCUBERESULTROWS]);}
+	if (Inputs[MAXPRINTSUBSCRIPTIONS] != null &amp;&amp; !Inputs[MAXPRINTSUBSCRIPTIONS].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[MAXPRINTSUBSCRIPTIONS]);
+		lStatement = lStatement.concat(Inputs[MAXPRINTSUBSCRIPTIONS]);}
+	if (Inputs[MAXQUOTAIMPORT] != null &amp;&amp; !Inputs[MAXQUOTAIMPORT].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[MAXQUOTAIMPORT]);
+		lStatement = lStatement.concat(Inputs[MAXQUOTAIMPORT]);}
+	if (Inputs[MAXSCHEDULEREPORTEXECTIME] != null &amp;&amp; !Inputs[MAXSCHEDULEREPORTEXECTIME].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[MAXSCHEDULEREPORTEXECTIME]);
+		lStatement = lStatement.concat(Inputs[MAXSCHEDULEREPORTEXECTIME]);}
+	if (Inputs[SQLGENERATIONMEMORY] != null &amp;&amp; !Inputs[SQLGENERATIONMEMORY].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[SQLGENERATIONMEMORY]);
+		lStatement = lStatement.concat(Inputs[SQLGENERATIONMEMORY]);}
+	if (Inputs[WAITTIMEFORPROMPTANSWERS] != null &amp;&amp; !Inputs[WAITTIMEFORPROMPTANSWERS].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[WAITTIMEFORPROMPTANSWERS]);
+		lStatement = lStatement.concat(Inputs[WAITTIMEFORPROMPTANSWERS]);}
+	if (Inputs[WAREHOUSEEXECUTIONTIME] != null &amp;&amp; !Inputs[WAREHOUSEEXECUTIONTIME].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[WAREHOUSEEXECUTIONTIME]);
+		lStatement = lStatement.concat(Inputs[WAREHOUSEEXECUTIONTIME]);}			
+	
+	if (Inputs[DOCUMENTTPL] != null &amp;&amp; !Inputs[DOCUMENTTPL].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[DOCUMENTTPL]);
+		lStatement = lStatement.concat("\"");
+		lStatement = lStatement.concat(Inputs[DOCUMENTTPL]);
+		lStatement = lStatement.concat("\"");}
+	if (Inputs[DOCUMENTSHOWEMPTYTPL] != null &amp;&amp; !Inputs[DOCUMENTSHOWEMPTYTPL].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[DOCUMENTSHOWEMPTYTPL]);
+		lStatement = lStatement.concat(Inputs[DOCUMENTSHOWEMPTYTPL]);}
+	if (Inputs[USEDOCWIZARD] != null &amp;&amp; !Inputs[USEDOCWIZARD].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[USEDOCWIZARD]);
+		lStatement = lStatement.concat(Inputs[USEDOCWIZARD]);}
+	
+	if (Inputs[NOWATERMARK].equals("NOWATERMARK") || Inputs[NOWATERMARK].equals("0"))
+	{
+		lStatement = lStatement.concat(" NOWATERMARK ");
+	}
+	else if (Inputs[NOWATERMARK].equals("TEXTWATERMARK"))
+	{
+		lStatement = lStatement.concat(" TEXTWATERMARK ");
+		if (Inputs[TEXT] != null ){ 
+			lStatement = lStatement.concat(KeyWords[TEXT]);
+			lStatement = lStatement.concat("\"");
+			lStatement = lStatement.concat(Inputs[TEXT]);
+			lStatement = lStatement.concat("\"");}
+		if (Inputs[SIZEAUTOMATICALLY] != null &amp;&amp; !Inputs[SIZEAUTOMATICALLY].equals("")){ 
+			lStatement = lStatement.concat(KeyWords[SIZEAUTOMATICALLY]);
+			lStatement = lStatement.concat(Inputs[SIZEAUTOMATICALLY]);}
+		if (Inputs[WASHOUT] != null &amp;&amp; !Inputs[WASHOUT].equals("")){ 
+			lStatement = lStatement.concat(KeyWords[WASHOUT]);
+			lStatement = lStatement.concat(Inputs[WASHOUT]);}
+		if (Inputs[ORIENTATION] != null &amp;&amp; !Inputs[ORIENTATION].equals("")){ 
+			lStatement = lStatement.concat(KeyWords[ORIENTATION]);
+			lStatement = lStatement.concat(Inputs[ORIENTATION]);}
+	}
+	else if (Inputs[NOWATERMARK].equals("IMAGEWATERMARK"))
+	{
+		lStatement = lStatement.concat(" IMAGEWATERMARK ");
+		if (Inputs[SOURCE] != null ){ 
+			lStatement = lStatement.concat(KeyWords[SOURCE]);
+			lStatement = lStatement.concat("\"");
+			lStatement = lStatement.concat(Inputs[SOURCE]);
+			lStatement = lStatement.concat("\"");}
+		if (Inputs[SCALE] != null &amp;&amp; !Inputs[SCALE].equals("")){ 
+			lStatement = lStatement.concat(KeyWords[SCALE]);
+			if (Inputs[SCALE].equalsIgnoreCase("Automatic"))
+				lStatement = lStatement.concat("AUTO");
+			else 
+				lStatement = lStatement.concat(Inputs[SCALE]);}
+	}						
+	
+	if (Inputs[OVERRIDEGRAPHTEMPLATEFONT] != null &amp;&amp; !Inputs[OVERRIDEGRAPHTEMPLATEFONT].equals("")){ 
+		lStatement = lStatement.concat(KeyWords[OVERRIDEGRAPHTEMPLATEFONT]);
+		lStatement = lStatement.concat(Inputs[OVERRIDEGRAPHTEMPLATEFONT]);}
+	if (Inputs[CHARACTERSET] != null ){ 
+		lStatement = lStatement.concat(KeyWords[CHARACTERSET]);
+		lStatement = lStatement.concat("\"");
+		lStatement = lStatement.concat(Inputs[CHARACTERSET]);
+		lStatement = lStatement.concat("\"");}
+	if (Inputs[FONT] != null ){ 
+		lStatement = lStatement.concat(KeyWords[FONT]);
+		lStatement = lStatement.concat("\"");
+		lStatement = lStatement.concat(Inputs[FONT]);
+		lStatement = lStatement.concat("\"");}
+	
+	lStatement = lStatement.concat(" IN PROJECT ");
+	lStatement = lStatement.concat("\"");
+	lStatement = lStatement.concat(projectName);
+	lStatement = lStatement.concat("\"");
+	lStatement = lStatement.concat(";");
+
+	oOutStream.println (lStatement);
+}catch (Exception e){
+	//print any file error here
+	printErr ("File error: " + e.getMessage());
+}finally{
+	if(oOutStream!=null){
+		oOutStream.close();
+	}
+	if(oFStream!=null){
+		oFStream.close();
+	}
+}
+
+}
+
+}
+
+</CODE>
+<SAMPLE/>
+<VERSION>1.0</VERSION>
+<TYPE>CUSTOM</TYPE>
+<INPUT_PARAMS>
+<INPUT INPUT_TYPE="STRING">scriptFile</INPUT>
+</INPUT_PARAMS>
+<CLASSPATH/>
+<TEST_INPUT>
+<TEST_INPUT_PARAM>c:\temp\</TEST_INPUT_PARAM>
+</TEST_INPUT>
+<TEST_CONNECTION_INFO>
+<TEST_PSN_NAME>sl73cdimapq012 VDM QA</TEST_PSN_NAME>
+<TEST_USERNAME>administrator</TEST_USERNAME>
+<TEST_PASSWORD>000000007c6cc00daa6b66dc5d5564a14c24be9050654273ec22906957aa71e2d84c9e8097793bfbb4fc4c77d5b77ded</TEST_PASSWORD>
+</TEST_CONNECTION_INFO>
+</PROCEDURE_DEFINITION>
