@@ -1,6 +1,5 @@
 <snippet>
-  <content><![CDATA[
-# ${1:Update Disabled Users}
+# Update Disabled Users
 This project was started because of SOC requirements (not to mention it just being a good idea) that all internal systems need to ensure users are disabled globally.
 
 Example is when a user leaves the company; all accounts must be disabled. Rather than relying on someone remembering to go into MicroStrategy and disable the user; we build an automated process.
@@ -28,6 +27,4 @@ Jonathan Smith
 ## Disclaimer
 We do not guarantee or be responsible for the safety of these procedures. Please evaluate the risk before you use any of them
 
-]]></content>
-  <tabTrigger>readme</tabTrigger>
 </snippet>
