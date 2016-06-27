@@ -25,7 +25,7 @@ You'll find the procedure appears in the CM Outline window, under Procedure_Outl
 You can always refer to the Procedure related topics in Command Manager Help document for more information.
 
 ## Execution
-EXECUTE PROCEDURE Server_Status("<server_name_string_match>");
+EXECUTE PROCEDURE Server_Status("server_name_string_match");
 
 ## History
 2016-06-27: Initial creation by Jonathan
