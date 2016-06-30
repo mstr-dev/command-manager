@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<PROCEDURE_DEFINITION>
+<DESCRIPTION>This will return the status of a server as specified in call.</DESCRIPTION>
+<CODE>// Capture the details around all of the servers for the connection&#13;
+ResultSet oServerData = executeCapture("LIST ALL SERVERS IN CLUSTER;");&#13;
+&#13;
+oServerData.moveFirst();&#13;
+while(!oServerData.isEof()){&#13;
+	// set variables from result set&#13;
+	String sServer = oServerData.getFieldValueString(NAME);&#13;
+	String sStatus = oServerData.getFieldValueString(CLUSTERED_SERVER_STATUS);&#13;
+&#13;
+	// check if this is the server we care about&#13;
+	if ( sServer.trim().toLowerCase().indexOf(sServerName.trim().toLowerCase()) &gt;= 0 ) {&#13;
+		// it is, so print out status&#13;
+		printOut("Server " + sServerName + " status: " + sStatus );&#13;
+	}&#13;
+	oServerData.moveNext();&#13;
+}</CODE>
+<SAMPLE/>
+<VERSION>1.0</VERSION>
+<TYPE>CUSTOM</TYPE>
+<INPUT_PARAMS>
+<INPUT INPUT_TYPE="STRING">sServerName</INPUT>
+</INPUT_PARAMS>
+<CLASSPATH/>
+<TEST_INPUT>
+<TEST_INPUT_PARAM/>
+</TEST_INPUT>
+<TEST_CONNECTION_INFO>
+<TEST_PSN_NAME></TEST_PSN_NAME>
+<TEST_USERNAME/>
+<TEST_PASSWORD></TEST_PASSWORD>
+</TEST_CONNECTION_INFO>
+</PROCEDURE_DEFINITION>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<PROCEDURE_DEFINITION>
+<DESCRIPTION>This procedure will run through every user in the project and if the LDAP status is Disabled then it will update the user status to disabled in MicroStrategy. It will also print out to the log each user it disables.</DESCRIPTION>
+<CODE>//get all users in the environment&#13;
+ResultSet userList = executeCapture("LIST LOGIN, LDAPLINK, ENABLED FOR USERS IN GROUP \"Everyone\";");&#13;
+//print how many users there are in the environment&#13;
+printOut("There are " + userList.getRowCount() + " users in MSTR");&#13;
+&#13;
+userList.moveFirst();&#13;
+while(!userList.isEof()){&#13;
+	//pull login, ldap_link, and enabled into variables&#13;
+	String sLogin = userList.getFieldValueString(LOGIN);&#13;
+	String sLink = userList.getFieldValueString(LDAP_LINK);&#13;
+	Boolean benabled = (Boolean)userList.getResultCell(DisplayPropertyEnum.ENABLED).getValue();&#13;
+	//for those users who are enabled and do not have a ldap_link value&#13;
+	if ((benabled == true) &amp;&amp; (sLink == "")) {&#13;
+		//don't mess with any of the users here...administrator || (or) ...&#13;
+		if((sLogin.toLowerCase().indexOf("administrator") &gt;= 0) || (sLogin.toLowerCase().indexOf("wjackson") &gt;= 0)) {&#13;
+			//Do not execute&#13;
+		} else {&#13;
+			//if the sLogin gets to here, the user is enabled in MicroStrategy but does not have an ldap_link (and was not in our exclusion)...so disable the user automatically&#13;
+			execute("ALTER USER \"" + sLogin + "\" DISABLED;");&#13;
+			printOut(sLogin + " has been disabled");&#13;
+		}&#13;
+	} else {&#13;
+		//Do nothing because this user was either disabled or had an ldap_link value&#13;
+	}&#13;
+	userList.moveNext();&#13;
+}</CODE>
+<SAMPLE>EXECUTE PROCEDURE Update_Disabled_LDAP_User();</SAMPLE>
+<VERSION>1.0</VERSION>
+<TYPE>CUSTOM</TYPE>
+<INPUT_PARAMS/>
+<CLASSPATH/>
+<TEST_INPUT/>
+<TEST_CONNECTION_INFO>
+<TEST_PSN_NAME></TEST_PSN_NAME>
+<TEST_USERNAME></TEST_USERNAME>
+<TEST_PASSWORD></TEST_PASSWORD>
+</TEST_CONNECTION_INFO>
+</PROCEDURE_DEFINITION>
