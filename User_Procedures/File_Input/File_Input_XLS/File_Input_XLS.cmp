@@ -55,7 +55,7 @@ while ( i &lt;= rowCount ) {&#13;
 &#13;
     i++;&#13;
 } // exit while loop</CODE>
-<SAMPLE>EXECUTE PROCEDURE File_Import_XLS("C:/Temp/test.xls",true);</SAMPLE>
+<SAMPLE>EXECUTE PROCEDURE File_Input_XLS("C:/Temp/test.xls",true);</SAMPLE>
 <VERSION>1.0</VERSION>
 <TYPE>CUSTOM</TYPE>
 <INPUT_PARAMS>

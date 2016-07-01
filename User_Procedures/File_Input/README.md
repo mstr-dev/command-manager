@@ -1,5 +1,5 @@
 <snippet>
-# File Importing
+# Using file for input
 Recently the community has had a lot of questions about "How do I use an external file in Command Manager"?
 
 Challenge Accepted!
