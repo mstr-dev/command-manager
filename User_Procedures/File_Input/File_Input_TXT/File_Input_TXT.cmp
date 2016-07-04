@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<PROCEDURE_DEFINITION>
+<DESCRIPTION>This procedure will loop through any text file type and execute commands in Command Manager appropriately.</DESCRIPTION>
+<CODE>// the purpose of this procedure is to capture the results of a text file and use it for command manager&#13;
+// please note that this procedure will only work with files readable through text editors like notepad or vim&#13;
+&#13;
+// this procedure is not intended for multi-column text files&#13;
+// to accomplish multi-column I recommend checking out OpenCSV library for Java&#13;
+&#13;
+// set the file and configure the scanner&#13;
+File file = new File(sFile);&#13;
+Scanner scanCount = new Scanner(file); // this line is just so we can count the file length&#13;
+Scanner scanner = new Scanner(file);&#13;
+&#13;
+// validate the file exists and the permissions&#13;
+// this section is commented out as its just for testing&#13;
+printOut("File: " + sFile);&#13;
+printOut("Exists: " + file.exists() + " | Execute: " + file.canExecute() + " | Read: " + file.canRead());&#13;
+&#13;
+// adjust starting row based on input for header&#13;
+if ( bHasHeader ){&#13;
+    // skip over the header row for both scanners&#13;
+    scanCount.nextLine();&#13;
+    scanner.nextLine();&#13;
+}&#13;
+&#13;
+// determine how many lines are in the file&#13;
+int lineCount = 0;&#13;
+while ( scanCount.hasNextLine() ) {&#13;
+    lineCount++;&#13;
+    scanCount.nextLine();&#13;
+}&#13;
+&#13;
+printOut("File: " + sFile + " has " + lineCount + " lines");&#13;
+&#13;
+// loop through the file and disable everyone&#13;
+while ( scanner.hasNextLine() ) {&#13;
+    String sValue = scanner.nextLine();&#13;
+    execute("ALTER USER \"" + sValue + "\" DISABLED;");&#13;
+}</CODE>
+<SAMPLE>EXECUTE PROCEDURE File_Input_TXT("C:/Temp/test.xls",true);</SAMPLE>
+<VERSION>1.0</VERSION>
+<TYPE>CUSTOM</TYPE>
+<INPUT_PARAMS>
+<INPUT INPUT_TYPE="STRING">sFile</INPUT>
+<INPUT INPUT_TYPE="BOOLEAN">bHasHeader</INPUT>
+</INPUT_PARAMS>
+<CLASSPATH/>
+<TEST_INPUT>
+<TEST_INPUT_PARAM>C:/Temp/test.txt</TEST_INPUT_PARAM>
+<TEST_INPUT_PARAM>true</TEST_INPUT_PARAM>
+</TEST_INPUT>
+<TEST_CONNECTION_INFO>
+<TEST_PSN_NAME>Local Machine</TEST_PSN_NAME>
+<TEST_USERNAME>Administrator</TEST_USERNAME>
+<TEST_PASSWORD>00000000453ec11a5ae5e97cb1fe638b94860d28c911585ab4fc4c77d5b77ded</TEST_PASSWORD>
+</TEST_CONNECTION_INFO>
+</PROCEDURE_DEFINITION>

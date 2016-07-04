@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<PROCEDURE_DEFINITION>
+<DESCRIPTION>This procedure will loop through an XLS file and execute commands in Command Manager appropriately.</DESCRIPTION>
+<CODE>// the purpose of this procedure is to capture the results of an XLS document and use them for command manager&#13;
+// please note that this version of JExcelAPI only supports XLSX&#13;
+// if XLSX is a must; check out Apache POI 3.9+ instead; I had a hard time getting it to work though&#13;
+&#13;
+// NOTES&#13;
+// before using this you need to download jxl&#13;
+// this document was written using version 2.6.12&#13;
+// source: https://sourceforge.net/projects/jexcelapi/files/jexcelapi/&#13;
+// after download, you need to add it to the class path in Command Manager's procedure (right hand side)&#13;
+&#13;
+// set the file and configure the workbook&#13;
+jxl.Workbook wrk =  jxl.Workbook.getWorkbook(new File(sFile));&#13;
+&#13;
+// grab the first worksheet in the workbook&#13;
+jxl.Sheet sheet = wrk.getSheet(0);&#13;
+&#13;
+// determine how long the document is using column 0 (A)&#13;
+jxl.Cell[] cellColumn = sheet.getColumn(0);&#13;
+int rowCount = cellColumn.length;&#13;
+&#13;
+// determine how wide the document is using row 0 (1)&#13;
+jxl.Cell[] cellRow = sheet.getRow(0);&#13;
+int columnCount = cellRow.length;&#13;
+&#13;
+printOut("The document is: " + rowCount + " rows long | " + columnCount + " columns wide");&#13;
+&#13;
+// adjust starting row based on input for header&#13;
+int i = 0;&#13;
+if ( bHasHeader ){&#13;
+    i = 1;&#13;
+}&#13;
+&#13;
+// loop through all the rows&#13;
+while ( i &lt;= rowCount ) {&#13;
+    // for the below example, we will loop through a list of users and disable them&#13;
+    // however you can add any logic you want in this section like;&#13;
+      // if row.columnA = x then do a; if row.columnB = y then do b; etc.&#13;
+    &#13;
+    // getCell([column], [row])&#13;
+    String sValueA = sheet.getCell(0, i).getContents();&#13;
+    String sValueB = sheet.getCell(1, i).getContents();&#13;
+    &#13;
+    if ( sValueB.contains("Enable")  ) {&#13;
+        execute("ALTER USER \"" + sValueA + "\" ENABLED;");&#13;
+        printOut( sValueA + " has been enabled");&#13;
+    } else if ( sValueB.contains("Disable") ) {&#13;
+        execute("ALTER USER \"" + sValueA + "\" DISABLED;");&#13;
+        printOut( sValueA + " has been disabled");&#13;
+    } else {&#13;
+        printOut( "ERROR: could not determine task for " + sValueA + " | " + sValueB);&#13;
+    }&#13;
+&#13;
+    i++;&#13;
+} // exit while loop</CODE>
+<SAMPLE>EXECUTE PROCEDURE File_Input_XLS("C:/Temp/test.xls",true);</SAMPLE>
+<VERSION>1.0</VERSION>
+<TYPE>CUSTOM</TYPE>
+<INPUT_PARAMS>
+<INPUT INPUT_TYPE="STRING">sFile</INPUT>
+<INPUT INPUT_TYPE="BOOLEAN">bHasHeader</INPUT>
+</INPUT_PARAMS>
+<CLASSPATH>
+<CLASSPATH_ITEM>C:\Temp\jexcelapi\jxl.jar</CLASSPATH_ITEM>
+</CLASSPATH>
+<TEST_INPUT>
+<TEST_INPUT_PARAM>C:/Temp/test.xls</TEST_INPUT_PARAM>
+<TEST_INPUT_PARAM>true</TEST_INPUT_PARAM>
+</TEST_INPUT>
+<TEST_CONNECTION_INFO>
+<TEST_PSN_NAME></TEST_PSN_NAME>
+<TEST_USERNAME></TEST_USERNAME>
+<TEST_PASSWORD></TEST_PASSWORD>
+</TEST_CONNECTION_INFO>
+</PROCEDURE_DEFINITION>
